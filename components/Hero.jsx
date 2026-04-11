@@ -39,11 +39,16 @@ const Hero = () => {
   }
 
   const cardVariants = {
-    hidden: { opacity: 0, scale: 0.9 },
+    hidden: { opacity: 0, scale: 0.9, rotateY: 10 },
     visible: {
       opacity: 1,
       scale: 1,
-      transition: { duration: 0.8, delay: 0.4, ease: 'easeOut' }
+      rotateY: 0,
+      transition: { duration: 1, delay: 0.4, ease: 'easeOut' }
+    },
+    hover: {
+      scale: 1.02,
+      transition: { duration: 0.3, ease: 'easeInOut' }
     }
   }
 
@@ -61,35 +66,69 @@ const Hero = () => {
         />
       </motion.div>
       
-      {/* Dark Overlay */}
+      {/* Enhanced Dark Overlay with Gradient */}
       <div className={`absolute inset-0 z-10 ${
-        mounted && isDark ? 'bg-black/55' : mounted ? 'bg-gradient-to-b from-black/40 to-black/20' : 'bg-black/55'
+        mounted && isDark 
+          ? 'bg-gradient-to-br from-black/70 via-black/50 to-black/60' 
+          : mounted 
+            ? 'bg-gradient-to-br from-blue-900/40 via-purple-900/30 to-black/40' 
+            : 'bg-black/60'
       }`} />
       
-      {/* Animated background elements */}
+      {/* Enhanced Animated background elements */}
       <div className="absolute inset-0 z-0">
         <motion.div
-          className="absolute top-20 left-10 w-72 h-72 bg-accent/20 rounded-full blur-3xl"
+          className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-br from-accent/30 to-accent/10 rounded-full blur-3xl"
           animate={{
             x: [0, 100, 0],
             y: [0, -50, 0],
+            scale: [1, 1.2, 1],
+            rotate: [0, 180, 360],
           }}
           transition={{
             duration: 20,
             repeat: Infinity,
             repeatType: "reverse",
+            ease: "easeInOut"
           }}
         />
         <motion.div
-          className="absolute bottom-20 right-10 w-96 h-96 bg-primary/20 rounded-full blur-3xl"
+          className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-tr from-primary/30 to-primary/10 rounded-full blur-3xl"
           animate={{
             x: [0, -100, 0],
             y: [0, 50, 0],
+            scale: [1, 0.8, 1],
+            rotate: [0, -180, 0],
           }}
           transition={{
             duration: 25,
             repeat: Infinity,
             repeatType: "reverse",
+            ease: "easeInOut"
+          }}
+        />
+        <motion.div
+          className="absolute top-1/2 left-1/4 w-32 h-32 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-2xl"
+          animate={{
+            scale: [1, 1.5, 1],
+            opacity: [0.3, 0.6, 0.3],
+          }}
+          transition={{
+            duration: 15,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+        <motion.div
+          className="absolute bottom-1/3 right-1/3 w-24 h-24 bg-gradient-to-tr from-blue-500/20 to-cyan-500/20 rounded-full blur-2xl"
+          animate={{
+            scale: [1, 0.7, 1],
+            opacity: [0.4, 0.7, 0.4],
+          }}
+          transition={{
+            duration: 18,
+            repeat: Infinity,
+            ease: "easeInOut"
           }}
         />
       </div>
@@ -104,7 +143,10 @@ const Hero = () => {
         {/* Glass card */}
         <motion.div
           variants={cardVariants}
-          className="rounded-2xl p-8 md:p-12 shadow-2xl hover-glow glass"
+          initial="hidden"
+          animate="visible"
+          whileHover="hover"
+          className="rounded-2xl p-8 md:p-12 shadow-2xl hover-glow glass backdrop-blur-xl border border-white/10"
         >
           {/* Badge */}
           {siteConfig.hero.badge && (

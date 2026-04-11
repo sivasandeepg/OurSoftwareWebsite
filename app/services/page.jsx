@@ -6,6 +6,7 @@ import { useTheme } from 'next-themes'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import Button from '../../components/Button'
+import TechStack from '../../components/TechStack'
 import { siteConfig } from '../../config/siteConfig'
 
 export default function Services() {
@@ -285,6 +286,9 @@ export default function Services() {
           </motion.div>
         </div>
       </section>
+
+      {/* Tech Stack Section */}
+      <TechStack />
 
       <Footer />
     </main>

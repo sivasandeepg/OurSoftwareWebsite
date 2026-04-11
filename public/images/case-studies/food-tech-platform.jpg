@@ -1,0 +1,17 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="foodGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#1f2937"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#foodGradient)"/>
+  <text x="400" y="300" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle">FoodTech</text>
+  <text x="400" y="340" font-family="Arial, sans-serif" font-size="20" fill="white" text-anchor="middle">Restaurant & Delivery</text>
+  <circle cx="200" cy="150" r="80" fill="#fbbf24" stroke="white" stroke-width="4"/>
+  <path d="M160 150 L200 150 L180 200" stroke="white" stroke-width="3" fill="none"/>
+  <path d="M200 150 L180 200" stroke="white" stroke-width="3" fill="none"/>
+  <circle cx="600" cy="150" r="80" fill="#4ade80" stroke="white" stroke-width="4"/>
+  <path d="M560 150 L640 150" stroke="white" stroke-width="3" fill="none"/>
+  <path d="M640 150 L720 150" stroke="white" stroke-width="3" fill="none"/>
+</svg>
