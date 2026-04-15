@@ -54,9 +54,9 @@ export const siteConfig = {
       accent: "#0f3460",
     },
     light: {
-      background: "from-amber-50 via-orange-50 to-yellow-50",
-      navBg: "bg-white/70 backdrop-blur-xl border-b border-black/10 shadow-sm",
-      card: "bg-white/60 backdrop-blur-md border border-black/10 shadow-md",
+      background: "from-slate-50 via-white to-slate-100",
+      navBg: "bg-white/80 backdrop-blur-xl border-b border-slate-200/80 shadow-sm",
+      card: "bg-white/80 backdrop-blur-md border border-slate-200 shadow-md",
       text: "text-gray-900",
       subtext: "text-gray-600",
       accent: "#0f3460",

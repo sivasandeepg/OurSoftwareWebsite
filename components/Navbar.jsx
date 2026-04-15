@@ -38,6 +38,7 @@ const Navbar = () => {
 
   const navItems = [
     { label: 'Services', href: '/services' },
+    { label: 'Digital Marketing', href: '/services' },
     { label: 'About', href: '/about' },
     { label: 'Case Studies', href: '/case-studies' },
     { label: 'Contact', href: '/contact' },
@@ -51,7 +52,7 @@ const Navbar = () => {
         transition={{ duration: 0.6, ease: 'easeOut' }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled
-            ? 'backdrop-blur-lg bg-white/70 dark:bg-gray-900/70 border-b border-white/20 dark:border-gray-700/50 h-16 shadow-lg'
+            ? 'backdrop-blur-lg bg-background/80 border-b border-border h-16 shadow-lg shadow-black/20'
             : 'h-20'
         }`}
       >
@@ -94,7 +95,7 @@ const Navbar = () => {
               {/* CTA Button */}
               <motion.a
                 href="/contact"
-                className="rounded-md px-5 py-2 text-sm font-semibold"
+                className="rounded-md px-5 py-2.5 text-sm font-semibold border border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.5 }}
@@ -188,7 +189,7 @@ const Navbar = () => {
                   <motion.a
                     href="/contact"
                     onClick={() => setIsOpen(false)}
-                    className="block w-full mt-8 btn-primary text-center"
+                    className="block w-full mt-8 rounded-md px-5 py-3 text-sm font-semibold text-center border border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.4 }}
