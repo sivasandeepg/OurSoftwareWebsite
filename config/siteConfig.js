@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: "TechVision Solutions",
+  name: "Aventurine Tech Solutions",
   tagline: "Innovating Digital Future",
   primaryColor: "#1a1a2e",
   secondaryColor: "#16213e",
@@ -13,7 +13,7 @@ export const siteConfig = {
     { label: "Contact", href: "/contact" },
   ],
   hero: {
-    title: "Welcome to TechVision Solutions",
+    title: "Welcome to Aventurine Tech Solutions",
     subtitle: "Building cutting-edge digital solutions that transform businesses and empower innovation.",
     ctaText: "Start Your Project",
     ctaHref: "/contact",
@@ -23,7 +23,7 @@ export const siteConfig = {
     // Company:  https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80
     // Default:  https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1920&q=80
   },
-  footer: " 2025 TechVision Solutions. All rights reserved.",
+  footer: " 2025 Aventurine Tech Solutions. All rights reserved.",
   footerLinks: {
     quickLinks: [
       { label: "Home", href: "/" },

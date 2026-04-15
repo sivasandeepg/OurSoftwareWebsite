@@ -53,7 +53,7 @@ const Testimonials = () => {
     {
       name: "Rajesh Kumar",
       role: "CEO, TechNova Solutions, Hyderabad",
-      content: "TechVision Solutions developed our enterprise software with exceptional quality. Their React and Node.js expertise transformed our business operations completely.",
+      content: "Aventurine Tech Solutions developed our enterprise software with exceptional quality. Their React and Node.js expertise transformed our business operations completely.",
       rating: 5
     },
     {

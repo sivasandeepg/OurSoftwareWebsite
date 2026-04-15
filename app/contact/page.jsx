@@ -134,7 +134,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <p className={`text-sm text-text-primary`}>Email</p>
-                      <p className={`text-slate-200`}>info@myschool.com</p>
+                      <p className={`text-slate-200`}>info@aventurine.in</p> 
                     </div>
                   </div>
                   
@@ -146,7 +146,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <p className={`text-sm text-text-primary`}>Phone</p>
-                      <p className={`text-slate-200`}>+1 (555) 123-4567</p>
+                      <p className={`text-slate-200`}>+91 8328227728</p>
                     </div>
                   </div>
                   
@@ -159,7 +159,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <p className={`text-sm text-text-primary`}>Address</p>
-                      <p className={`text-slate-600`}>123 Education Street, Learning City, LC 12345</p>
+                      <p className={`text-slate-600`}>Hyderabad, Telangana</p> 
                     </div>
                   </div>
                 </div>
