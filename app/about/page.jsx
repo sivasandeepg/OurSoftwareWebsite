@@ -18,25 +18,25 @@ export default function About() {
   // TODO: connect to CMS (Sanity/Contentful) for dynamic content
   const teamMembers = [
     {
-      name: "Alex Chen",
+      name: "Madhu Babu",
       role: "CEO & Founder",
-      bio: "Visionary leader with 15+ years in software development and digital transformation.",
+      bio: "Visionary leader with 5+ years in software development and digital transformation.",
       image: "/images/team/ceo.jpg"
-    },
+    }, 
     {
-      name: "Sarah Mitchell",
+      name: "Siva Sandeep",
       role: "CTO",
       bio: "Expert in cloud architecture and scalable software solutions with enterprise experience.",
       image: "/images/team/cto.jpg"
     },
     {
-      name: "David Rodriguez",
+      name: "Ramya Suvvari", 
       role: "Lead Developer",
       bio: "Full-stack developer specializing in React, Node.js, and modern web technologies.",
       image: "/images/team/lead-dev.jpg"
     },
     {
-      name: "Emily Thompson",
+      name: "Aabhinandana",
       role: "Head of Design",
       bio: "Creative director focused on user experience and innovative design solutions.",
       image: "/images/team/design.jpg"

@@ -87,7 +87,7 @@ const Footer = () => {
               <li>
                 <a
                   href="/about"
-                  className="text-sm font-normal hover:opacity-80 transition-opacity"
+                  className="text-sm text-text-muted hover:text-text-primary transition-colors duration-300"
                 >
                   About
                 </a>
@@ -95,7 +95,7 @@ const Footer = () => {
               <li>
                 <a
                   href="/careers"
-                  className="text-sm font-normal hover:opacity-80 transition-opacity"
+                  className="text-sm text-text-muted hover:text-text-primary transition-colors duration-300"
                 >
                   Careers
                 </a>
@@ -103,7 +103,7 @@ const Footer = () => {
               <li>
                 <a
                   href="/blog"
-                  className="text-sm font-normal hover:opacity-80 transition-opacity"
+                  className="text-sm text-text-muted hover:text-text-primary transition-colors duration-300"
                 >
                   Blog
                 </a>
@@ -140,6 +140,11 @@ const Footer = () => {
               <li>
                 <a href="/services/consulting" className="text-sm text-text-muted hover:text-text-primary transition-colors duration-300">
                   Consulting
+                </a>
+              </li>
+              <li>
+                <a href="/services" className="text-sm text-text-muted hover:text-text-primary transition-colors duration-300">
+                  Digital Marketing
                 </a>
               </li>
             </ul>

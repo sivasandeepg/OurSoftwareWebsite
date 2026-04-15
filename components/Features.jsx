@@ -101,7 +101,7 @@ const Features = () => {
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-text-primary">
             What We Build
           </h2>
-          <p className="text-base md:text-lg text-muted">
+          <p className="text-base md:text-lg text-text-muted">
             End-to-end software solutions for modern businesses
           </p>
         </motion.div>

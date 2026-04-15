@@ -133,8 +133,8 @@ export default function Contact() {
                       </svg>
                     </div>
                     <div>
-                      <p className={`text-sm text-slate-500`}>Email</p>
-                      <p className={`text-slate-900`}>info@myschool.com</p>
+                      <p className={`text-sm text-text-primary`}>Email</p>
+                      <p className={`text-slate-200`}>info@myschool.com</p>
                     </div>
                   </div>
                   
@@ -145,8 +145,8 @@ export default function Contact() {
                       </svg>
                     </div>
                     <div>
-                      <p className={`text-sm text-slate-500`}>Phone</p>
-                      <p className={`text-slate-900`}>+1 (555) 123-4567</p>
+                      <p className={`text-sm text-text-primary`}>Phone</p>
+                      <p className={`text-slate-200`}>+1 (555) 123-4567</p>
                     </div>
                   </div>
                   
@@ -158,8 +158,8 @@ export default function Contact() {
                       </svg>
                     </div>
                     <div>
-                      <p className={`text-sm text-slate-500`}>Address</p>
-                      <p className={`text-slate-900`}>123 Education Street<br />Learning City, LC 12345</p>
+                      <p className={`text-sm text-text-primary`}>Address</p>
+                      <p className={`text-slate-600`}>123 Education Street, Learning City, LC 12345</p>
                     </div>
                   </div>
                 </div>

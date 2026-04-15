@@ -93,7 +93,7 @@ const Hero = () => {
             >
               <motion.a
                 href="/contact"
-                className="rounded-md px-7 py-3 text-sm font-semibold"
+                className="btn-primary"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -101,7 +101,7 @@ const Hero = () => {
               </motion.a>
               <motion.a
                 href="/case-studies"
-                className="rounded-md px-7 py-3 text-sm font-semibold"
+                className="btn-outline"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -142,10 +142,10 @@ const Hero = () => {
                   </div>
                   <div className="text-primary">// AI-powered automation</div>
                   <div className="text-text-muted">
-                    <span className="text-secondary">const</span> agent = <span className="text-primary">createAI</span>(&#123;
+                    <span className="text-primary">const</span> agent = <span className="text-primary">createAI</span>(&#123;
                   </div>
                   <div className="ml-4 text-text-muted">
-                    model: <span className="text-secondary">'gpt-4'</span>,
+                    model: <span className="text-primary">'gpt-4'</span>,
                   </div>
                   <div className="ml-4 text-text-muted">
                     capabilities: [<span className="text-primary">'analysis'</span>, <span className="text-primary">'automation'</span>]

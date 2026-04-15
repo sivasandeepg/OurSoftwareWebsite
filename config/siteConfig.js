@@ -44,6 +44,12 @@ export const siteConfig = {
     linkedin: "#",
     instagram: "#",
   },
+  stats: [
+    { label: "Projects Delivered", value: "500+", prefix: "" },
+    { label: "Happy Clients", value: "50+", prefix: "" },
+    { label: "Years of Experience", value: "10+", prefix: "" },
+    { label: "Team Members", value: "25+", prefix: "" }
+  ],
     theme: {
     dark: {
       background: "from-gray-950 via-[#1a1a2e] to-[#16213e]",

@@ -38,9 +38,7 @@ const Navbar = () => {
 
   const navItems = [
     { label: 'Services', href: '/services' },
-    { label: 'Digital Marketing', href: '/services' },
     { label: 'About', href: '/about' },
-    { label: 'Case Studies', href: '/case-studies' },
     { label: 'Contact', href: '/contact' },
   ]
 

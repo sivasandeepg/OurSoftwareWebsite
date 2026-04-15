@@ -5,7 +5,6 @@ import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
 import Features from '../components/Features'
 import StatsStrip from '../components/StatsStrip'
-import CaseStudies from '../components/CaseStudies'
 import Testimonials from '../components/Testimonials'
 import Footer from '../components/Footer'
 import { siteConfig } from '../config/siteConfig'
@@ -34,7 +33,6 @@ export default function Home() {
       <Hero />
       <Features />
       <StatsStrip />
-      <CaseStudies />
       <Testimonials />
       
       {/* CTA Section */}
@@ -50,7 +48,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.a
                 href="/contact"
-                className="rounded-md px-7 py-3 text-sm font-semibold"
+                className="btn-primary"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -58,7 +56,7 @@ export default function Home() {
               </motion.a>
               <motion.a
                 href="/case-studies"
-                className="rounded-md px-7 py-3 text-sm font-semibold"
+                className="btn-outline"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
