@@ -1,29 +1,23 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { motion, useScroll, useTransform } from 'framer-motion'
-import { useTheme } from 'next-themes'
-import { siteConfig } from '../config/siteConfig'
-import Button from './Button'
+import { motion } from 'framer-motion'
 
 const Hero = () => {
-  const { theme } = useTheme()
   const [mounted, setMounted] = useState(false)
-  const isDark = theme === 'dark'
-  const { scrollY } = useScroll()
-  const y = useTransform(scrollY, [0, 600], [0, 200])
-  const opacity = useTransform(scrollY, [0, 400], [1, 0.3])
 
   useEffect(() => {
     setMounted(true)
   }, [])
+
+  if (!mounted) return null
 
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        duration: 0.6,
+        duration: 0.8,
         staggerChildren: 0.2
       }
     }
@@ -39,11 +33,10 @@ const Hero = () => {
   }
 
   const cardVariants = {
-    hidden: { opacity: 0, scale: 0.9, rotateY: 10 },
+    hidden: { opacity: 0, scale: 0.9 },
     visible: {
       opacity: 1,
       scale: 1,
-      rotateY: 0,
       transition: { duration: 1, delay: 0.4, ease: 'easeOut' }
     },
     hover: {
@@ -53,226 +46,130 @@ const Hero = () => {
   }
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Parallax Background Image */}
-      <motion.div 
-        style={{ y, opacity }} 
-        className="absolute inset-0 z-0"
-      >
-        <img 
-          src={siteConfig.hero.backgroundImage} 
-          alt="Background"
-          className="w-full h-full object-cover"
-        />
-      </motion.div>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background grid-background noise-texture py-24 md:py-36">
+      {/* Radial gradient glow */}
+      <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-primary/15 rounded-full blur-3xl"></div>
       
-      {/* Enhanced Dark Overlay with Gradient */}
-      <div className={`absolute inset-0 z-10 ${
-        mounted && isDark 
-          ? 'bg-gradient-to-br from-black/70 via-black/50 to-black/60' 
-          : mounted 
-            ? 'bg-gradient-to-br from-blue-900/40 via-purple-900/30 to-black/40' 
-            : 'bg-black/60'
-      }`} />
-      
-      {/* Enhanced Animated background elements */}
-      <div className="absolute inset-0 z-0">
-        <motion.div
-          className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-br from-accent/30 to-accent/10 rounded-full blur-3xl"
-          animate={{
-            x: [0, 100, 0],
-            y: [0, -50, 0],
-            scale: [1, 1.2, 1],
-            rotate: [0, 180, 360],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            repeatType: "reverse",
-            ease: "easeInOut"
-          }}
-        />
-        <motion.div
-          className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-tr from-primary/30 to-primary/10 rounded-full blur-3xl"
-          animate={{
-            x: [0, -100, 0],
-            y: [0, 50, 0],
-            scale: [1, 0.8, 1],
-            rotate: [0, -180, 0],
-          }}
-          transition={{
-            duration: 25,
-            repeat: Infinity,
-            repeatType: "reverse",
-            ease: "easeInOut"
-          }}
-        />
-        <motion.div
-          className="absolute top-1/2 left-1/4 w-32 h-32 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-2xl"
-          animate={{
-            scale: [1, 1.5, 1],
-            opacity: [0.3, 0.6, 0.3],
-          }}
-          transition={{
-            duration: 15,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-        <motion.div
-          className="absolute bottom-1/3 right-1/3 w-24 h-24 bg-gradient-to-tr from-blue-500/20 to-cyan-500/20 rounded-full blur-2xl"
-          animate={{
-            scale: [1, 0.7, 1],
-            opacity: [0.4, 0.7, 0.4],
-          }}
-          transition={{
-            duration: 18,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-      </div>
-
       {/* Hero content */}
       <motion.div
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
+        className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 w-full"
       >
-        {/* Glass card */}
-        <motion.div
-          variants={cardVariants}
-          initial="hidden"
-          animate="visible"
-          whileHover="hover"
-          className="rounded-2xl p-8 md:p-12 shadow-2xl hover-glow glass backdrop-blur-xl border border-white/10"
-        >
-          {/* Badge */}
-          {siteConfig.hero.badge && (
+        <div className="grid lg:grid-cols-[60%_40%] gap-12 lg:gap-16 items-center">
+          {/* Left Column */}
+          <div className="space-y-8">
+            {/* Badge */}
             <motion.div
               variants={itemVariants}
-              className="inline-flex items-center px-4 py-1 border border-white/40 bg-white/20 rounded-full text-xs tracking-widest uppercase mb-4 text-white font-medium"
-              animate={{
-                background: [
-                  "linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent)",
-                  "linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent)",
-                ],
-                backgroundSize: "200% 200%",
-                backgroundPosition: ["0% 0%", "100% 100%"],
-              }}
-              transition={{ duration: 2, repeat: Infinity }}
+              className="inline-flex items-center px-4 py-2 border border-primary/20 bg-primary/10 rounded-full text-xs font-inter font-medium tracking-[0.1em] uppercase text-primary"
             >
-              ✦ {siteConfig.hero.badge}
+              AI-Powered · Enterprise Ready
             </motion.div>
-          )}
-          
-          {/* Tagline */}
-          <motion.p
-            variants={itemVariants}
-            className="text-sm md:text-base font-medium mb-4 tracking-wider uppercase text-accent"
-          >
-            {siteConfig.tagline}
-          </motion.p>
+            
+            {/* Main headline */}
+            <motion.h1
+              variants={itemVariants}
+              className="font-extrabold font-inter text-5xl md:text-6xl lg:text-7xl leading-tight tracking-tight text-text-primary animate-fade-in-up"
+            >
+              We Build Software
+              <br />
+              That Thinks Ahead
+            </motion.h1>
 
-          {/* Main title - Split into two lines */}
-          <motion.h1
-            variants={itemVariants}
-            className="font-heading text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-white"
-          >
-            {siteConfig.hero.title.split(' ').map((word, index) => (
-              <motion.span
-                key={index}
-                variants={itemVariants}
-                transition={{ delay: index * 0.2 }}
+            {/* Subheadline */}
+            <motion.p
+              variants={itemVariants}
+              className="text-lg md:text-xl font-normal max-w-2xl leading-relaxed text-text-muted"
+            >
+              From AI agents to enterprise platforms — we engineer intelligent software that scales with your ambition.
+            </motion.p>
+
+            {/* CTA Buttons */}
+            <motion.div
+              variants={itemVariants}
+              className="flex flex-col sm:flex-row gap-4"
+            >
+              <motion.a
+                href="/contact"
+                className="rounded-md px-7 py-3 text-sm font-semibold"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                {word}
-                {index < siteConfig.hero.title.split(' ').length - 1 && ' '}
-              </motion.span>
-            ))}
-          </motion.h1>
-
-          {/* Subtitle with gradient text */}
-          <motion.p
-            variants={itemVariants}
-            className="text-lg md:text-xl mb-8 max-w-2xl mx-auto leading-relaxed text-white/80"
-          >
-            <span className="bg-gradient-to-r from-accent to-white bg-clip-text text-transparent">
-              {siteConfig.hero.subtitle}
-            </span>
-          </motion.p>
-
-          {/* Stats Row */}
-          {siteConfig.hero.stats && (
-            <motion.div
-              variants={itemVariants}
-              className="flex flex-wrap justify-center gap-8 mb-8"
-            >
-              {siteConfig.hero.stats.map((stat, index) => (
-                <motion.div
-                  key={index}
-                  variants={itemVariants}
-                  transition={{ delay: index * 0.1 }}
-                  className="text-center"
-                >
-                  <div className="text-3xl md:text-4xl font-bold mb-1 text-white">
-                    {stat.value}
-                    {stat.suffix && <span className="text-xl md:text-2xl">{stat.suffix}</span>}
-                  </div>
-                  <div className="text-sm text-white/70">
-                    {stat.label}
-                  </div>
-                </motion.div>
-              ))}
+                Start a Project
+              </motion.a>
+              <motion.a
+                href="/case-studies"
+                className="rounded-md px-7 py-3 text-sm font-semibold"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                View Our Work
+              </motion.a>
             </motion.div>
-          )}
-          
-          {/* CTA Button */}
-          <motion.div
-            variants={itemVariants}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-          >
-            <Button
-              href={siteConfig.hero.ctaHref}
-              size="lg"
-              className="w-full sm:w-auto"
-            >
-              {siteConfig.hero.ctaText}
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              href="#features"
-              className="w-full sm:w-auto"
-            >
-              Learn More
-            </Button>
-          </motion.div>
-        </motion.div>
 
-        {/* Enhanced Scroll Indicator */}
-        <motion.div
-          variants={itemVariants}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
-        >
-          {/* Animated scroll line */}
+            {/* Trust line */}
+            <motion.p
+              variants={itemVariants}
+              className="text-[13px] text-text-muted"
+            >
+              Trusted by 50+ companies across 12 countries
+            </motion.p>
+          </div>
+
+          {/* Right Column - Abstract Visual */}
           <motion.div
-            className="w-0.5 h-16 bg-white/40 rounded-full"
-            initial={{ scaleY: 0 }}
-            animate={{ scaleY: 1 }}
-            transition={{ duration: 1 }}
-          />
-          
-          {/* Scroll text */}
-          <motion.p
-            variants={itemVariants}
-            className="text-white/40 text-xs uppercase tracking-widest -rotate-90 origin-left mt-2"
-            animate={{ opacity: [0.4, 0.8, 0.4] }}
-            transition={{ duration: 2, repeat: Infinity }}
+            variants={cardVariants}
+            initial="hidden"
+            animate="visible"
+            whileHover="hover"
+            className="relative"
           >
-            Scroll to explore
-          </motion.p>
-        </motion.div>
+            {/* Floating card with gradient border */}
+            <div className="relative bg-surface border border-border rounded-xl p-6 glow-primary shadow-2xl overflow-hidden">
+              {/* Gradient border effect */}
+              <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-primary to-secondary opacity-20 blur-sm"></div>
+              
+              {/* Card content */}
+              <div className="relative bg-surface rounded-lg p-4 border border-border">
+                {/* Fake code snippet */}
+                <div className="space-y-3 font-mono text-sm">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                    <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                  </div>
+                  <div className="text-primary">// AI-powered automation</div>
+                  <div className="text-text-muted">
+                    <span className="text-secondary">const</span> agent = <span className="text-primary">createAI</span>(&#123;
+                  </div>
+                  <div className="ml-4 text-text-muted">
+                    model: <span className="text-secondary">'gpt-4'</span>,
+                  </div>
+                  <div className="ml-4 text-text-muted">
+                    capabilities: [<span className="text-primary">'analysis'</span>, <span className="text-primary">'automation'</span>]
+                  </div>
+                  <div className="text-text-muted">&#125;);</div>
+                </div>
+
+                {/* Pulsing circle accent */}
+                <motion.div
+                  className="absolute top-2 right-2 w-2 h-2 bg-primary rounded-full"
+                  animate={{
+                    scale: [1, 1.5, 1],
+                    opacity: [0.6, 1, 0.6],
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                />
+              </div>
+            </div>
+          </motion.div>
+        </div>
       </motion.div>
     </section>
   )

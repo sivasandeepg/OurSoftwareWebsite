@@ -9,9 +9,7 @@ import Button from '../../components/Button'
 import { siteConfig } from '../../config/siteConfig'
 
 export default function Contact() {
-  const { theme } = useTheme()
   const [mounted, setMounted] = useState(false)
-  const isDark = theme === 'dark'
 
   useEffect(() => {
     setMounted(true)
@@ -87,28 +85,18 @@ export default function Contact() {
       <Navbar />
       
       {/* Hero Section */}
-      <section className={`py-20 px-4 sm:px-6 lg:px-8 ${
-        mounted && isDark ? '' : 'bg-gradient-to-br from-[#f8faff] to-[#eef2ff]'
-      }`}>
+      <section className={`py-20 px-4 sm:px-6 lg:px-8 bg-background`}>
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className={`rounded-2xl p-8 md:p-12 ${
-              mounted && isDark 
-                ? 'glass'
-                : 'bg-white border border-slate-200 shadow-sm'
-              }`}
+            className={`rounded-2xl p-8 md:p-12 glass`}
           >
-            <h1 className={`font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6 ${
-              mounted && isDark ? 'text-white' : 'text-[#0f2040]'
-            }`}>
+            <h1 className={`font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6`}>
               Contact Us
             </h1>
-            <p className={`text-lg md:text-xl leading-relaxed ${
-              mounted && isDark ? 'text-white/80' : 'text-[#4a6080]'
-            }`}>
+            <p className={`text-lg md:text-xl leading-relaxed`}>
               Get in touch with {siteConfig.name}. We're here to help and answer any questions you may have.
             </p>
           </motion.div>
@@ -116,9 +104,7 @@ export default function Contact() {
       </section>
 
       {/* Contact Content */}
-      <section className={`py-20 px-4 sm:px-6 lg:px-8 ${
-        mounted && isDark ? '' : 'bg-gradient-to-br from-[#f8faff] to-[#eef2ff]'
-      }`}>
+      <section className={`py-20 px-4 sm:px-6 lg:px-8 bg-background`}>
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             
@@ -130,100 +116,60 @@ export default function Contact() {
               viewport={{ once: true }}
               className="space-y-8"
             >
-              <motion.div variants={itemVariants} className={`rounded-xl p-6 ${
-                mounted && isDark 
-                  ? 'glass'
-                  : 'bg-white border border-slate-200 shadow-sm'
-                }`}>
-                <h3 className={`font-heading text-2xl font-semibold mb-4 ${
-                  mounted && isDark ? 'text-white' : 'text-[#0f2040]'
-                }`}>
+              <motion.div variants={itemVariants} className={`rounded-xl p-6 glass`}>
+                <h3 className={`font-heading text-2xl font-semibold mb-4`}>
                   Get in Touch
                 </h3>
-                <p className={`mb-6 ${
-                  mounted && isDark ? 'text-white/70' : 'text-[#4a6080]'
-                }`}>
+                <p className={`mb-6`}>
                   We'd love to hear from you. Whether you have a question about our programs, 
                   want to schedule a visit, or need more information about enrollment, we're here to help.
                 </p>
                 
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
-                    <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${
-                      mounted && isDark 
-                        ? 'bg-accent/20 text-accent'
-                        : 'bg-[#eef2ff] text-[#0f3460]'
-                      }`}>
+                    <div className={`w-10 h-10 rounded-lg flex items-center justify-center bg-accent/20 text-accent`}>
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                       </svg>
                     </div>
                     <div>
-                      <p className={`text-sm ${
-                        mounted && isDark ? 'text-white/60' : 'text-slate-500'
-                      }`}>Email</p>
-                      <p className={`${
-                        mounted && isDark ? 'text-white' : 'text-slate-900'
-                      }`}>info@myschool.com</p>
+                      <p className={`text-sm text-slate-500`}>Email</p>
+                      <p className={`text-slate-900`}>info@myschool.com</p>
                     </div>
                   </div>
                   
                   <div className="flex items-center space-x-3">
-                    <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${
-                      mounted && isDark 
-                        ? 'bg-accent/20 text-accent'
-                        : 'bg-[#eef2ff] text-[#0f3460]'
-                      }`}>
+                    <div className={`w-10 h-10 rounded-lg flex items-center justify-center bg-accent/20 text-accent`}>
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                       </svg>
                     </div>
                     <div>
-                      <p className={`text-sm ${
-                        mounted && isDark ? 'text-white/60' : 'text-slate-500'
-                      }`}>Phone</p>
-                      <p className={`${
-                        mounted && isDark ? 'text-white' : 'text-slate-900'
-                      }`}>+1 (555) 123-4567</p>
+                      <p className={`text-sm text-slate-500`}>Phone</p>
+                      <p className={`text-slate-900`}>+1 (555) 123-4567</p>
                     </div>
                   </div>
                   
                   <div className="flex items-center space-x-3">
-                    <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${
-                      mounted && isDark 
-                        ? 'bg-accent/20 text-accent'
-                        : 'bg-[#eef2ff] text-[#0f3460]'
-                      }`}>
+                    <div className={`w-10 h-10 rounded-lg flex items-center justify-center bg-accent/20 text-accent`}>
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                       </svg>
                     </div>
                     <div>
-                      <p className={`text-sm ${
-                        mounted && isDark ? 'text-white/60' : 'text-slate-500'
-                      }`}>Address</p>
-                      <p className={`${
-                        mounted && isDark ? 'text-white' : 'text-slate-900'
-                      }`}>123 Education Street<br />Learning City, LC 12345</p>
+                      <p className={`text-sm text-slate-500`}>Address</p>
+                      <p className={`text-slate-900`}>123 Education Street<br />Learning City, LC 12345</p>
                     </div>
                   </div>
                 </div>
               </motion.div>
 
-              <motion.div variants={itemVariants} className={`rounded-xl p-6 ${
-                mounted && isDark 
-                  ? 'glass'
-                  : 'bg-white border border-slate-200 shadow-sm'
-                }`}>
-                <h3 className={`font-heading text-xl font-semibold mb-4 ${
-                  mounted && isDark ? 'text-white' : 'text-[#0f2040]'
-                }`}>
+              <motion.div variants={itemVariants} className={`rounded-xl p-6 glass`}>
+                <h3 className={`font-heading text-xl font-semibold mb-4`}>
                   Office Hours
                 </h3>
-                <div className={`space-y-2 ${
-                  mounted && isDark ? 'text-white/70' : 'text-[#4a6080]'
-                }`}>
+                <div className={`space-y-2 text-slate-600`}>
                   <div className="flex justify-between">
                     <span>Monday - Friday</span>
                     <span>8:00 AM - 4:00 PM</span>
@@ -239,24 +185,14 @@ export default function Contact() {
                 </div>
               </motion.div>
 
-              <motion.div variants={itemVariants} className={`rounded-xl p-6 ${
-                mounted && isDark 
-                  ? 'glass'
-                  : 'bg-white border border-slate-200 shadow-sm'
-                }`}>
-                <h3 className={`font-heading text-xl font-semibold mb-4 ${
-                  mounted && isDark ? 'text-white' : 'text-[#0f2040]'
-                }`}>
+              <motion.div variants={itemVariants} className={`rounded-xl p-6 glass`}>
+                <h3 className={`font-heading text-xl font-semibold mb-4`}>
                   Follow Us
                 </h3>
                 <div className="flex space-x-4">
                   <motion.a
                     href="#"
-                    className={`w-10 h-10 rounded-lg flex items-center justify-center transition-colors duration-200 ${
-                      mounted && isDark 
-                        ? 'bg-accent/20 text-white hover:bg-accent/30'
-                        : 'bg-[#eef2ff] text-[#0f3460] hover:bg-[#d4e4ff]'
-                    }`}
+                    className={`w-10 h-10 rounded-lg flex items-center justify-center transition-colors duration-200 bg-accent/20 text-accent hover:bg-accent/30`}
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                   >
@@ -266,11 +202,7 @@ export default function Contact() {
                   </motion.a>
                   <motion.a
                     href="#"
-                    className={`w-10 h-10 rounded-lg flex items-center justify-center transition-colors duration-200 ${
-                      mounted && isDark 
-                        ? 'bg-accent/20 text-white hover:bg-accent/30'
-                        : 'bg-[#eef2ff] text-[#0f3460] hover:bg-[#d4e4ff]'
-                    }`}
+                    className={`w-10 h-10 rounded-lg flex items-center justify-center transition-colors duration-200 bg-accent/20 text-accent hover:bg-accent/30`}
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                   >
@@ -280,11 +212,7 @@ export default function Contact() {
                   </motion.a>
                   <motion.a
                     href="#"
-                    className={`w-10 h-10 rounded-lg flex items-center justify-center transition-colors duration-200 ${
-                      mounted && isDark 
-                        ? 'bg-accent/20 text-white hover:bg-accent/30'
-                        : 'bg-[#eef2ff] text-[#0f3460] hover:bg-[#d4e4ff]'
-                    }`}
+                    className={`w-10 h-10 rounded-lg flex items-center justify-center transition-colors duration-200 bg-accent/20 text-accent hover:bg-accent/30`}
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                   >
@@ -303,14 +231,8 @@ export default function Contact() {
               whileInView="visible"
               viewport={{ once: true }}
             >
-              <motion.div variants={itemVariants} className={`rounded-xl p-6 md:p-8 ${
-                mounted && isDark 
-                  ? 'glass'
-                  : 'bg-white border border-slate-200 shadow-sm'
-                }`}>
-                <h3 className={`font-heading text-2xl font-semibold mb-6 ${
-                  mounted && isDark ? 'text-white' : 'text-[#0f2040]'
-                }`}>
+              <motion.div variants={itemVariants} className={`rounded-xl p-6 md:p-8 glass`}>
+                <h3 className={`font-heading text-2xl font-semibold mb-6`}>
                   Send us a Message
                 </h3>
                 
@@ -324,7 +246,7 @@ export default function Contact() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                       <label htmlFor="name" className={`block text-sm font-medium mb-2 ${
-                        mounted && isDark ? 'text-white/70' : 'text-slate-600'
+                        'text-muted'
                       }`}>
                         Name *
                       </label>
@@ -336,9 +258,7 @@ export default function Contact() {
                         value={formData.name}
                         onChange={handleChange}
                         className={`w-full px-4 py-3 rounded-lg focus:outline-none focus:border-accent transition-colors duration-200 ${
-                      mounted && isDark 
-                        ? 'bg-white/10 border border-white/20 text-white placeholder-white/50 focus:bg-white/20'
-                        : 'bg-white border border-slate-300 text-slate-900 placeholder-slate-500 focus:border-[#0f3460]'
+                      'bg-surface/50 border border text-text-primary placeholder-text-muted focus:border-primary'
                     }`}
                         placeholder="Your full name"
                       />
@@ -346,7 +266,7 @@ export default function Contact() {
                     
                     <div>
                       <label htmlFor="email" className={`block text-sm font-medium mb-2 ${
-                        mounted && isDark ? 'text-white/70' : 'text-slate-600'
+                        'text-muted'
                       }`}>
                         Email *
                       </label>
@@ -358,9 +278,7 @@ export default function Contact() {
                         value={formData.email}
                         onChange={handleChange}
                         className={`w-full px-4 py-3 rounded-lg focus:outline-none focus:border-accent transition-colors duration-200 ${
-                      mounted && isDark 
-                        ? 'bg-white/10 border border-white/20 text-white placeholder-white/50 focus:bg-white/20'
-                        : 'bg-white border border-slate-300 text-slate-900 placeholder-slate-500 focus:border-[#0f3460]'
+                      'bg-surface/50 border border text-text-primary placeholder-text-muted focus:border-primary'
                     }`}
                         placeholder="your@email.com"
                       />
@@ -369,7 +287,7 @@ export default function Contact() {
                   
                   <div>
                     <label htmlFor="phone" className={`block text-sm font-medium mb-2 ${
-                        mounted && isDark ? 'text-white/70' : 'text-slate-600'
+                        'text-muted'
                       }`}>
                       Phone
                     </label>
@@ -380,9 +298,7 @@ export default function Contact() {
                       value={formData.phone}
                       onChange={handleChange}
                       className={`w-full px-4 py-3 rounded-lg focus:outline-none focus:border-accent transition-colors duration-200 ${
-                      mounted && isDark 
-                        ? 'bg-white/10 border border-white/20 text-white placeholder-white/50 focus:bg-white/20'
-                        : 'bg-white border border-slate-300 text-slate-900 placeholder-slate-500 focus:border-[#0f3460]'
+                      'bg-surface/50 border border text-text-primary placeholder-text-muted focus:border-primary'
                     }`}
                       placeholder="(555) 123-4567"
                     />
@@ -390,7 +306,7 @@ export default function Contact() {
                   
                   <div>
                     <label htmlFor="subject" className={`block text-sm font-medium mb-2 ${
-                        mounted && isDark ? 'text-white/70' : 'text-slate-600'
+                        'text-muted'
                       }`}>
                       Subject *
                     </label>
@@ -402,9 +318,7 @@ export default function Contact() {
                       value={formData.subject}
                       onChange={handleChange}
                       className={`w-full px-4 py-3 rounded-lg focus:outline-none focus:border-accent transition-colors duration-200 ${
-                      mounted && isDark 
-                        ? 'bg-white/10 border border-white/20 text-white placeholder-white/50 focus:bg-white/20'
-                        : 'bg-white border border-slate-300 text-slate-900 placeholder-slate-500 focus:border-[#0f3460]'
+                      'bg-surface/50 border border text-text-primary placeholder-text-muted focus:border-primary'
                     }`}
                       placeholder="How can we help you?"
                     />
@@ -412,7 +326,7 @@ export default function Contact() {
                   
                   <div>
                     <label htmlFor="message" className={`block text-sm font-medium mb-2 ${
-                        mounted && isDark ? 'text-white/70' : 'text-slate-600'
+                        'text-muted'
                       }`}>
                       Message *
                     </label>
@@ -424,9 +338,7 @@ export default function Contact() {
                       value={formData.message}
                       onChange={handleChange}
                       className={`w-full px-4 py-3 rounded-lg focus:outline-none focus:border-accent transition-colors duration-200 resize-none ${
-                      mounted && isDark 
-                        ? 'bg-white/10 border border-white/20 text-white placeholder-white/50 focus:bg-white/20'
-                        : 'bg-white border border-slate-300 text-slate-900 placeholder-slate-500 focus:border-[#0f3460]'
+                      'bg-surface/50 border border text-text-primary placeholder-text-muted focus:border-primary'
                     }`}
                       placeholder="Tell us more about your inquiry..."
                     />
@@ -442,7 +354,7 @@ export default function Contact() {
                   </Button>
                 </form>
                 
-                <p className={`text-sm mt-4 ${mounted && isDark ? 'text-white/60' : 'text-slate-500'}`}>
+                <p className={`text-sm mt-4 ${'text-muted'}`}>
                   * Required fields. This form will open your email client with the details pre-filled.
                 </p>
               </motion.div>

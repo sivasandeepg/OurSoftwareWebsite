@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { useTheme } from 'next-themes'
-import { siteConfig } from '../config/siteConfig'
 
 const Testimonials = () => {
   const { theme } = useTheme()
@@ -144,7 +143,7 @@ const Testimonials = () => {
   }
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8">
+    <section className="py-[120px] px-6 lg:px-8 bg-background">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <motion.div
@@ -154,15 +153,11 @@ const Testimonials = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className={`font-heading text-3xl md:text-4xl lg:text-5xl font-bold mb-4 ${
-            mounted && isDark ? 'text-white' : 'text-gray-900'
-          }`}>
-            What People Say
+          <h2 className="font-bold font-inter text-3xl md:text-4xl lg:text-5xl text-text-primary mb-4">
+            Client Testimonials
           </h2>
-          <p className={`text-lg max-w-2xl mx-auto ${
-            mounted && isDark ? 'text-white/80' : 'text-gray-700'
-          }`}>
-            Hear from our clients about their experiences working with {siteConfig.name}
+          <p className="text-lg text-text-muted max-w-2xl mx-auto">
+            Hear from our clients about their experiences working with us
           </p>
         </motion.div>
 
@@ -182,27 +177,17 @@ const Testimonials = () => {
               key={index}
               variants={itemVariants}
               whileHover={{ scale: 1.02 }}
-              className={`rounded-xl p-6 hover-glow flex-shrink-0 w-80 ${
-                mounted && isDark 
-                  ? 'glass'
-                  : 'bg-white border border-slate-200 shadow-sm'
-              }`}
+              className="card rounded-xl p-6 flex-shrink-0 w-80"
             >
               <StarRating rating={testimonial.rating} />
-              <p className={`text-sm mb-4 mt-4 italic leading-relaxed ${
-                mounted && isDark ? 'text-white/80' : 'text-slate-600'
-              }`}>
+              <p className="text-sm text-text-muted mb-4 mt-4 italic leading-relaxed">
                 "{testimonial.content}"
               </p>
               <div>
-                <h4 className={`font-heading font-semibold ${
-                  mounted && isDark ? 'text-white' : 'text-slate-900'
-                }`}>
+                <h4 className="font-semibold font-inter text-text-primary">
                   {testimonial.name}
                 </h4>
-                <p className={`text-sm ${
-                  mounted && isDark ? 'text-white/60' : 'text-slate-500'
-                }`}>
+                <p className="text-sm text-text-muted">
                   {testimonial.role}
                 </p>
               </div>

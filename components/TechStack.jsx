@@ -111,7 +111,7 @@ const TechStack = () => {
 
   return (
     <section className={`py-20 px-4 sm:px-6 lg:px-8 ${
-      isDark ? '' : 'bg-gradient-to-br from-[#f8faff] to-[#eef2ff]'
+      isDark ? '' : 'bg-gradient-to-br from-[#1e293b] to-[#334155]'
     }`}>
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
@@ -132,12 +132,12 @@ const TechStack = () => {
           </motion.p>
           
           <h2 className={`font-heading text-3xl md:text-4xl lg:text-5xl font-bold mb-4 ${
-            isDark ? 'text-white' : 'text-[#0f2040]'
+            isDark ? 'text-white' : 'text-white'
           }`}>
             Technologies We Master
           </h2>
           <p className={`text-lg max-w-2xl mx-auto ${
-            isDark ? 'text-white/80' : 'text-[#4a6080]'
+            isDark ? 'text-white/80' : 'text-white/90'
           }`}>
             Cutting-edge technologies and frameworks we use to build exceptional digital solutions
           </p>
@@ -164,14 +164,14 @@ const TechStack = () => {
               <div className={`relative rounded-xl p-6 text-center transition-all duration-300 cursor-pointer ${
                 isDark 
                   ? 'bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20'
-                  : 'bg-white border border-slate-200 shadow-md hover:shadow-lg'
+                  : 'bg-slate-800/90 backdrop-blur-md border border-slate-600 hover:bg-slate-800'
               }`}>
                 {/* Gradient Background */}
                 <div className={`absolute inset-0 rounded-xl bg-gradient-to-br ${tech.color} opacity-10`} />
                 
                 {/* Icon */}
                 <div className={`relative z-10 w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4 ${
-                  isDark ? 'bg-white/10' : 'bg-white/90'
+                  isDark ? 'bg-white/10' : 'bg-slate-700/80'
                 }`}>
                   <div className={`bg-gradient-to-br ${tech.color} bg-clip-text text-transparent`}>
                     {tech.icon}
@@ -180,13 +180,15 @@ const TechStack = () => {
 
                 {/* Tech Name */}
                 <h3 className={`font-bold text-lg mb-2 ${
-                  isDark ? 'text-white' : 'text-slate-900'
+                  isDark ? 'text-white' : 'text-white'
                 }`}>
                   {tech.name}
                 </h3>
 
                 {/* Proficiency Bar */}
-                <div className="w-full bg-gray-200 rounded-full h-2 mb-2 overflow-hidden">
+                <div className={`w-full rounded-full h-2 mb-2 overflow-hidden ${
+                  isDark ? 'bg-gray-200' : 'bg-slate-600'
+                }`}>
                   <motion.div 
                     className={`h-full bg-gradient-to-r ${tech.color} rounded-full`}
                     initial={{ width: 0 }}

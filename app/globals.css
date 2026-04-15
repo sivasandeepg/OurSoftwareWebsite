@@ -1,64 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --font-inter: var(--font-inter);
-  --font-playfair: var(--font-playfair);
+  --font-inter: 'Inter', sans-serif;
 }
 
 @layer base {
   html {
     scroll-behavior: smooth;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   
-  /* Glass utility classes */
-  .glass {
-    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  body {
+    font-family: var(--font-inter);
+    background-color: rgb(10, 10, 15);
+    color: rgb(240, 240, 245);
   }
 
-  .glass-light {
-    @apply bg-white/90 backdrop-blur-md border border-gray-200 shadow-md;
+  /* Grid background pattern */
+  .grid-background {
+    background-image: 
+      linear-gradient(rgba(30, 30, 46, 0.5) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(30, 30, 46, 0.5) 1px, transparent 1px);
+    background-size: 40px 40px;
   }
 
-  .glass-dark {
-    @apply bg-black/20 backdrop-blur-md border border-white/10;
-  }
-
-  /* Smooth transitions for theme switching - scoped to avoid perf issues */
-  body, nav, header, footer, section, .glass, .glass-light, .glass-dark {
-    transition-property: background-color, border-color, color;
-    transition-duration: 300ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  /* Theme-specific body backgrounds */
-  .dark body {
-    background: linear-gradient(135deg, #030712, #1a1a2e, #16213e);
-  }
-
-  .light body, body {
-    background: linear-gradient(135deg, #f8faff, #eef2ff, #f0f4ff);
+  /* Noise texture */
+  .noise-texture::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1;
   }
 }
 
 @layer components {
-  .glass {
-    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  /* Button base styles */
+  .btn-primary {
+    @apply bg-primary text-white px-7 py-3.5 rounded-md transition-all duration-300 hover:opacity-90 font-inter font-medium;
   }
-  
-  .glass-dark {
-    @apply bg-black/20 backdrop-blur-md border border-white/10;
+
+  .btn-secondary {
+    @apply bg-transparent text-text-primary border border-border px-7 py-3.5 rounded-md transition-all duration-300 hover:bg-surface font-inter font-medium;
   }
-  
-  .text-glow {
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+
+  .btn-outline {
+    @apply bg-transparent text-primary border border-primary px-5 py-2.5 rounded-md transition-all duration-300 hover:bg-primary hover:text-white font-inter font-medium;
   }
-  
-  .hover-glow {
-    @apply transition-all duration-300 hover:shadow-lg hover:shadow-white/20 hover:scale-105;
+
+  /* Card styles */
+  .card {
+    @apply bg-surface border border-border rounded-xl p-8 transition-all duration-300 hover:border-primary hover:shadow-lg hover:shadow-primary/20;
   }
-  
+
+  /* Text styles */
+  .text-gradient {
+    background: linear-gradient(135deg, #6C63FF, #00D4FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Glow effects */
+  .glow-primary {
+    box-shadow: 0 0 20px rgba(108, 99, 255, 0.3);
+  }
+
+  .glow-secondary {
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+  }
+
+  /* Navbar backdrop */
+  .navbar-backdrop {
+    backdrop-filter: blur(12px);
+    background-color: rgba(10, 10, 15, 0.8);
+  }
+
+  /* Scrollbar hide */
   .scrollbar-hide {
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -66,5 +93,19 @@
   
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
+  }
+
+  /* Glass morphism effect */
+  .glass {
+    background: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  }
+
+  /* Hover glow effect */
+  .hover-glow:hover {
+    box-shadow: 0 20px 40px rgba(96, 165, 250, 0.2);
+    transform: translateY(-2px);
   }
 }

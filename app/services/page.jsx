@@ -10,9 +10,7 @@ import TechStack from '../../components/TechStack'
 import { siteConfig } from '../../config/siteConfig'
 
 export default function Services() {
-  const { theme } = useTheme()
   const [mounted, setMounted] = useState(false)
-  const isDark = theme === 'dark'
 
   useEffect(() => {
     setMounted(true)
@@ -106,27 +104,23 @@ export default function Services() {
       <Navbar />
       
       {/* Hero Section */}
-      <section className={`py-20 px-4 sm:px-6 lg:px-8 ${
-        mounted && isDark ? '' : 'bg-gradient-to-br from-[#f8faff] to-[#eef2ff]'
-      }`}>
+      <section className={`py-20 px-4 sm:px-6 lg:px-8 bg-background`}>
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className={`rounded-2xl p-8 md:p-12 ${
-              mounted && isDark 
-                ? 'glass'
-                : 'bg-white border border-slate-200 shadow-sm'
+              'glass'
               }`}
           >
             <h1 className={`font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6 ${
-              mounted && isDark ? 'text-white' : 'text-[#0f2040]'
+              'text-text-primary'
             }`}>
               Our Software Development Services
             </h1>
             <p className={`text-lg md:text-xl leading-relaxed ${
-              mounted && isDark ? 'text-white/80' : 'text-[#4a6080]'
+              'text-muted'
             }`}>
               Discover comprehensive software development solutions we offer at {siteConfig.name}
             </p>
@@ -135,9 +129,7 @@ export default function Services() {
       </section>
 
       {/* Services Grid */}
-      <section className={`py-20 px-4 sm:px-6 lg:px-8 ${
-        mounted && isDark ? '' : 'bg-gradient-to-br from-[#f8faff] to-[#eef2ff]'
-      }`}>
+      <section className={`py-20 px-4 sm:px-6 lg:px-8 bg-background`}>
         <div className="max-w-6xl mx-auto">
           <motion.div
             variants={containerVariants}
@@ -155,16 +147,12 @@ export default function Services() {
                   boxShadow: "0 20px 40px rgba(0,0,0,0.3)"
                 }}
                 className={`rounded-xl p-6 hover-glow h-full flex flex-col ${
-                  mounted && isDark 
-                    ? 'glass'
-                    : 'bg-white border border-slate-200 shadow-sm hover:border-slate-300'
+                  'glass hover-glow'
                 }`}
               >
                 {/* Icon */}
                 <div className={`w-16 h-16 rounded-lg flex items-center justify-center mb-4 ${
-                  mounted && isDark 
-                    ? 'bg-accent/20 text-accent'
-                    : 'bg-[#eef2ff] text-[#0f3460]'
+                  'bg-secondary/20 text-secondary'
                 }`}>
                   <div>
                     {service.icon}
@@ -173,12 +161,12 @@ export default function Services() {
 
                 {/* Content */}
                 <h3 className={`font-heading text-xl font-semibold mb-3 ${
-                  mounted && isDark ? 'text-white' : 'text-slate-900'
+                  'text-text-primary'
                 }`}>
                   {service.title}
                 </h3>
                 <p className={`leading-relaxed mb-4 flex-grow ${
-                  mounted && isDark ? 'text-white/70' : 'text-slate-600'
+                  'text-muted'
                 }`}>
                   {service.description}
                 </p>
@@ -187,9 +175,9 @@ export default function Services() {
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className={`flex items-center text-sm ${
-                      mounted && isDark ? 'text-white/60' : 'text-slate-500'
+                      'text-muted'
                     }`}>
-                      <svg className="w-4 h-4 text-accent mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <svg className="w-4 h-4 text-secondary mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
                       {feature}
@@ -203,9 +191,7 @@ export default function Services() {
       </section>
 
       {/* Additional Information */}
-      <section className={`py-20 px-4 sm:px-6 lg:px-8 ${
-        mounted && isDark ? '' : 'bg-gradient-to-br from-[#f8faff] to-[#eef2ff]'
-      }`}>
+      <section className={`py-20 px-4 sm:px-6 lg:px-8 bg-background`}>
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -213,13 +199,13 @@ export default function Services() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className={`rounded-2xl p-8 md:p-12 ${
-              mounted && isDark 
+              mounted 
                 ? 'glass'
                 : 'bg-white border border-slate-200 shadow-md'
             }`}
           >
             <h2 className={`font-heading text-3xl md:text-4xl font-bold mb-6 text-center ${
-              mounted && isDark ? 'text-white' : 'text-[#0f2040]'
+              'text-text-primary'
             }`}>
               Why Choose Our Software Solutions?
             </h2>
@@ -227,12 +213,12 @@ export default function Services() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
               <div>
                 <h3 className={`font-heading text-xl font-semibold mb-3 ${
-                  mounted && isDark ? 'text-white' : 'text-slate-900'
+                  'text-text-primary'
                 }`}>
                   Cutting-Edge Technology
                 </h3>
                 <p className={`leading-relaxed ${
-                  mounted && isDark ? 'text-white/70' : 'text-slate-600'
+                  'text-muted'
                 }`}>
                   We leverage the latest technologies and frameworks to build scalable, secure, and high-performance software solutions tailored to your business needs.
                 </p>
@@ -240,12 +226,12 @@ export default function Services() {
               
               <div>
                 <h3 className={`font-heading text-xl font-semibold mb-3 ${
-                  mounted && isDark ? 'text-white' : 'text-slate-900'
+                  'text-text-primary'
                 }`}>
                   Expert Development Team
                 </h3>
                 <p className={`leading-relaxed ${
-                  mounted && isDark ? 'text-white/70' : 'text-slate-600'
+                  'text-muted'
                 }`}>
                   Our skilled developers and designers bring years of experience in delivering innovative software solutions across various industries.
                 </p>
@@ -253,12 +239,12 @@ export default function Services() {
               
               <div>
                 <h3 className={`font-heading text-xl font-semibold mb-3 ${
-                  mounted && isDark ? 'text-white' : 'text-slate-900'
+                  'text-text-primary'
                 }`}>
                   Agile Development Process
                 </h3>
                 <p className={`leading-relaxed ${
-                  mounted && isDark ? 'text-white/70' : 'text-slate-600'
+                  'text-muted'
                 }`}>
                   We follow agile methodologies to ensure transparent communication, rapid iteration, and delivery of solutions that meet your exact requirements.
                 </p>
@@ -266,12 +252,12 @@ export default function Services() {
               
               <div>
                 <h3 className={`font-heading text-xl font-semibold mb-3 ${
-                  mounted && isDark ? 'text-white' : 'text-slate-900'
+                  'text-text-primary'
                 }`}>
                   Proven Track Record
                 </h3>
                 <p className={`leading-relaxed ${
-                  mounted && isDark ? 'text-white/70' : 'text-slate-600'
+                  'text-muted'
                 }`}>
                   With 500+ successful projects delivered, we have a proven track record of creating software that drives business growth and innovation.
                 </p>

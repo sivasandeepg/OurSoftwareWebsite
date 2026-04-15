@@ -1,5 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-const { siteConfig } = require('./config/siteConfig.js');
 
 module.exports = {
   content: [
@@ -11,16 +10,34 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#0f3460',
-        secondary: '#1a1a2e',
-        accent: '#e94560',
+        background: '#0A0F1F',
+        surface: '#1A1F2E',
+        border: '#2D3748',
+        primary: '#60A5FA',
+        secondary: '#34D399',
+        'text-primary': '#E2E8F0',
+        'text-muted': '#94A3B8',
       },
       fontFamily: {
-        heading: [siteConfig.headingFont, 'serif'],
-        body: [siteConfig.bodyFont, 'sans-serif'],
+        sans: ['Inter', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
       },
       backdropBlur: {
         xs: '2px',
+      },
+      animation: {
+        'fade-in-up': 'fadeInUp 0.8s ease-out',
+        'pulse-glow': 'pulseGlow 2s ease-in-out infinite',
+      },
+      keyframes: {
+        fadeInUp: {
+          '0%': { opacity: '0', transform: 'translateY(30px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        pulseGlow: {
+          '0%, 100%': { opacity: '0.6', transform: 'scale(1)' },
+          '50%': { opacity: '1', transform: 'scale(1.05)' },
+        },
       },
     },
   },
