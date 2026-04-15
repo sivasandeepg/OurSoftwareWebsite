@@ -157,8 +157,8 @@ const Footer = () => {
             </h4>
             <div className="space-y-3">
               <a href={`mailto:hello@${siteConfig.name.toLowerCase().replace(/\s+/g, '')}.com`} className="text-sm font-normal hover:opacity-80 transition-opacity">
-                hello@techcorp.com
-              </a>
+               aventurinetechsolutions@gmail.com
+              </a> 
               <a href="/contact" className="inline-block btn-outline text-sm">
                 Book a Call
               </a>

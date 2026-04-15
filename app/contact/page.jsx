@@ -134,10 +134,10 @@ export default function Contact() {
                     </div>
                     <div>
                       <p className={`text-sm text-text-primary`}>Email</p>
-                      <p className={`text-slate-200`}>info@aventurine.in</p> 
+                      <p className={`text-slate-200`}>aventurinetechsolutions@gmail.com</p> 
                     </div>
                   </div>
-                  
+                    
                   <div className="flex items-center space-x-3">
                     <div className={`w-10 h-10 rounded-lg flex items-center justify-center bg-accent/20 text-accent`}>
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
