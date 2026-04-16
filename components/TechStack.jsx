@@ -148,9 +148,7 @@ const TechStack = () => {
   }
 
   return (
-    <section className={`py-20 px-4 sm:px-6 lg:px-8 ${
-      isDark ? '' : 'bg-gradient-to-br from-[#1e293b] to-[#334155]'
-    }`}>
+    <section className={`py-20 px-4 sm:px-6 lg:px-8 bg-background`}>
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <motion.div

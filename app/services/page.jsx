@@ -193,7 +193,7 @@ export default function Services() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="rounded-2xl p-8 md:p-12 bg-white border border-slate-200 shadow-md"
+            className={`rounded-xl p-6 md:p-8 glass hover-glow`}
           >
             <h2 className={`font-heading text-3xl md:text-4xl font-bold mb-6 text-center ${
               'text-text-primary'
