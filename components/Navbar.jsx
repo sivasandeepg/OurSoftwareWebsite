@@ -37,6 +37,7 @@ const Navbar = () => {
   if (!mounted) return null
 
   const navItems = [
+    { label: 'Home', href: '/' },
     { label: 'Services', href: '/services' },
     { label: 'About', href: '/about' },
     { label: 'Contact', href: '/contact' },
