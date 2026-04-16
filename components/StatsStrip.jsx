@@ -12,7 +12,7 @@ const StatsStrip = () => {
 
   const stats = [
     { value: "50+", label: "Projects Delivered" },
-    { value: "12", label: "Countries Served" },
+    { value: "12+", label: "We Master's" },
     { value: "98%", label: "Client Retention" },
     { value: "5+", label: "Years Building" }
   ]
