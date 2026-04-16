@@ -30,7 +30,7 @@ export default function About() {
       image: "/images/team/cto.jpg"
     },
     {
-      name: "Ramya Suvvari", 
+      name: "Ramya S", 
       role: "Lead Developer",
       bio: "Full-stack developer specializing in React, Node.js, and modern web technologies.",
       image: "/images/team/lead-dev.jpg"
