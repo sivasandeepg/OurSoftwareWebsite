@@ -47,6 +47,8 @@ const Footer = () => {
             <div className="flex space-x-4">
                             <motion.a
                 href={siteConfig.social.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 flex items-center justify-center rounded-lg transition-colors duration-300 text-text-muted hover:text-text-primary"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
@@ -57,6 +59,8 @@ const Footer = () => {
               </motion.a>
               <motion.a
                 href={siteConfig.social.twitter}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 flex items-center justify-center rounded-lg transition-colors duration-300 text-text-muted hover:text-text-primary"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
@@ -67,6 +71,8 @@ const Footer = () => {
               </motion.a>
               <motion.a
                 href={siteConfig.social.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 flex items-center justify-center rounded-lg transition-colors duration-300 text-text-muted hover:text-text-primary"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}

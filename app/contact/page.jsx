@@ -187,6 +187,8 @@ export default function Contact() {
                 <div className="flex space-x-4">
                   <motion.a
                     href={siteConfig.social.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={`w-10 h-10 rounded-lg flex items-center justify-center transition-colors duration-200 bg-accent/20 text-accent hover:bg-accent/30`}
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
@@ -197,6 +199,8 @@ export default function Contact() {
                   </motion.a>
                   <motion.a
                     href={siteConfig.social.twitter}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={`w-10 h-10 rounded-lg flex items-center justify-center transition-colors duration-200 bg-accent/20 text-accent hover:bg-accent/30`}
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
@@ -207,6 +211,8 @@ export default function Contact() {
                   </motion.a>
                   <motion.a
                     href={siteConfig.social.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={`w-10 h-10 rounded-lg flex items-center justify-center transition-colors duration-200 bg-accent/20 text-accent hover:bg-accent/30`}
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
