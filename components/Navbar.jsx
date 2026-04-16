@@ -43,6 +43,14 @@ const Navbar = () => {
     { label: 'Contact', href: '/contact' },
   ]
 
+  // Check if current path matches a nav item (including sub-pages)
+  const isActive = (href) => {
+    if (href === '/') {
+      return pathname === '/'
+    }
+    return pathname.startsWith(href)
+  }
+
   return (
     <>
       <motion.nav
@@ -81,7 +89,11 @@ const Navbar = () => {
                 <motion.a
                   key={item.href}
                   href={item.href}
-                  className="text-sm font-inter font-medium text-text-muted hover:text-text-primary transition-all duration-300 tracking-wide"
+                  className={`text-sm font-inter font-medium transition-all duration-300 tracking-wide ${
+                    isActive(item.href) 
+                      ? 'text-primary font-semibold' 
+                      : 'text-text-muted hover:text-text-primary'
+                  }`}
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1, duration: 0.5 }}
@@ -174,7 +186,11 @@ const Navbar = () => {
                         key={item.href}
                         href={item.href}
                         onClick={() => setIsOpen(false)}
-                        className="block px-4 py-3 rounded-lg text-lg font-medium transition-all duration-200 text-text-muted hover:text-text-primary hover:bg-surface"
+                        className={`block px-4 py-3 rounded-lg text-lg font-medium transition-all duration-200 ${
+                          isActive(item.href) 
+                            ? 'text-primary bg-primary/10 font-semibold' 
+                            : 'text-text-muted hover:text-text-primary hover:bg-surface'
+                        }`}
                         initial={{ opacity: 0, x: 30 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.1 + index * 0.05 }}

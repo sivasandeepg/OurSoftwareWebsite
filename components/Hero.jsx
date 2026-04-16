@@ -114,7 +114,7 @@ const Hero = () => {
               variants={itemVariants}
               className="text-[13px] text-text-muted"
             >
-              Trusted by 50+ companies across 12 countries
+              Designing the Future of Fortune
             </motion.p>
           </div>
 
