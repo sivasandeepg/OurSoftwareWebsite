@@ -40,9 +40,9 @@ export const siteConfig = {
   },
   social: {
     github: "#",
-    twitter: "https://twitter.com/aventurine_tech",
-    linkedin: "https://www.linkedin.com/company/aventurine-tech-solutions",
-    instagram: "https://www.instagram.com/aventurinetechsolutions",
+    twitter: "https://x.com/aventurine_tech",
+    linkedin: "https://linkedin.com/in/aventurine-tech-solutions-b18b3b403",
+    instagram: "https://www.instagram.com/aventurinetechsolutions/",
   },
   location: {
     address: "Your Street Address, Kavali, Nellore District, Andhra Pradesh - 524201",
