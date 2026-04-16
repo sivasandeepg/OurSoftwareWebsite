@@ -1,10 +1,10 @@
 import { siteConfig } from '../../config/siteConfig'
 
 export const metadata = {
-  title: 'Best Software Company in Kavali | Web & App Development Nellore',
+  title: 'Software Development Company Kavali | Web & App Development Nellore',
   description: `Aventurine Tech Solutions: Leading software company in Kavali, Nellore. Expert in web development, mobile apps, .NET software & AI agents. Transform your business today!`,
   keywords: [
-    'best software company in Kavali',
+    'software company Kavali',
     'software company in Nellore',
     'web development Kavali',
     'app development Nellore district',
@@ -23,14 +23,14 @@ export const metadata = {
     'custom software for SMEs Nellore district'
   ],
   openGraph: {
-    title: `Best Software Company in Kavali | Web & App Development Nellore`,
+    title: `Software Development Company Kavali | Web & App Development Nellore`,
     description: `Aventurine Tech Solutions: Leading software company in Kavali, Nellore District. Expert in web development, mobile apps, .NET software & AI agents for local businesses.`,
     images: [
       {
         url: '/og-home.jpg',
         width: 1200,
         height: 630,
-        alt: `Aventurine Tech Solutions - Best Software Company in Kavali, Nellore District`,
+        alt: `Aventurine Tech Solutions - Software Development Company Kavali, Nellore District`,
       },
     ],
   },
@@ -123,7 +123,7 @@ export const structuredData = {
     },
     {
       "@type": "WebPage",
-      "name": "Best Software Company in Kavali | Web & App Development Nellore",
+      "name": "Software Development Company Kavali | Web & App Development Nellore",
       "description": "Aventurine Tech Solutions: Leading software company in Kavali, Nellore. Expert in web development, mobile apps, .NET software & AI agents.",
       "url": process.env.NEXT_PUBLIC_SITE_URL || 'https://aventurinetechsolutions.com',
       "isPartOf": {

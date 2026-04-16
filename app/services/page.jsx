@@ -54,7 +54,7 @@ export default function Services() {
     },
     {
       title: "UI/UX Design",
-      description: "Stunning user interfaces and experiences designed with modern tools and best practices for maximum engagement.",
+      description: "Stunning user interfaces and experiences designed with modern tools and professional practices for maximum engagement.",
       features: ["User Research", "Wireframing", "Prototyping", "Design Systems"],
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">

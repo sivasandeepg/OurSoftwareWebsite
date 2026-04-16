@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "Aventurine Tech Solutions",
-  tagline: "Best Software Company in Kavali | Web & App Development Nellore",
+  tagline: "Software Development Company Kavali | Web & App Development Nellore",
   primaryColor: "#1a1a2e",
   secondaryColor: "#16213e",
   accentColor: "#0f3460",
@@ -13,11 +13,11 @@ export const siteConfig = {
     { label: "Contact", href: "/contact" },
   ],
   hero: {
-    title: "Best Software Company in Kavali | Transform Your Digital Presence",
+    title: "Software Development Company Kavali | Transform Your Digital Presence",
     subtitle: "Leading software development company in Kavali, Nellore District. Expert in web development, mobile apps, .NET software & AI agents for local businesses.",
     ctaText: "Start Your Project",
     ctaHref: "/contact",
-    badge: "✦ #1 Software Company in Kavali | Serving Nellore District & Andhra Pradesh",
+    badge: "✦ Leading Software Company in Kavali | Serving Nellore District & Andhra Pradesh",
     backgroundImage: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80",
     // Hospital: https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=1920&q=80
     // Company:  https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80

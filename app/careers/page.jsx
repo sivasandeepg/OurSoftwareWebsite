@@ -89,7 +89,7 @@ export default function Careers() {
     },
     {
       title: "Modern Tools",
-      description: "Latest hardware and software tools to help you do your best work."
+      description: "Latest hardware and software tools to help you do your excellent work."
     }
   ]
 

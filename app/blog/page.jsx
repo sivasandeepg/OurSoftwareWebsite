@@ -25,7 +25,7 @@ export default function Blog() {
       image: "/images/blog/web-dev-trends.jpg"
     },
     {
-      title: "Cloud Migration Best Practices for Enterprise Applications",
+      title: "Cloud Migration Strategies for Enterprise Applications",
       excerpt: "Learn how to successfully migrate your enterprise applications to the cloud with minimal disruption.",
       category: "Cloud Computing",
       date: "March 10, 2024",
@@ -42,7 +42,7 @@ export default function Blog() {
     },
     {
       title: "Building Scalable Microservices Architecture",
-      excerpt: "Learn the principles and best practices for designing and implementing scalable microservices.",
+      excerpt: "Learn principles and professional practices for designing and implementing scalable microservices.",
       category: "Architecture",
       date: "February 28, 2024",
       readTime: "7 min read",
@@ -50,7 +50,7 @@ export default function Blog() {
     },
     {
       title: "The Importance of Cybersecurity in Modern Software Development",
-      excerpt: "Understanding security best practices and how to integrate them into your development workflow.",
+      excerpt: "Understanding security professional practices and how to integrate them into your development workflow.",
       category: "Security",
       date: "February 20, 2024",
       readTime: "5 min read",

@@ -164,7 +164,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-border mt-8 pt-8">
           <p className="text-center text-[13px] text-text-muted">
-            © {currentYear} TechCorp. All rights reserved.
+            © {currentYear} {siteConfig.name}. All rights reserved.
           </p>
         </div>
       </motion.div>

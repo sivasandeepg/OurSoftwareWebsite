@@ -42,7 +42,7 @@ export const metadata = {
     siteName: siteConfig.name,
     images: [
       {
-        url: '/og-image.jpg',
+        url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://aventurinetechsolutions.com'}/og-image.jpg`,
         width: 1200,
         height: 630,
         alt: `${siteConfig.name} - Professional Software Development`,
@@ -53,7 +53,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: `Software Development Company Kavali | Web & App Development Nellore`,
     description: `Professional software development company specializing in web development, mobile apps, and digital solutions.`,
-    images: ['/og-image.jpg'],
+    images: [`${process.env.NEXT_PUBLIC_SITE_URL || 'https://aventurinetechsolutions.com'}/og-image.jpg`],
     creator: '@aventurine_tech',
   },
   robots: {
@@ -68,8 +68,8 @@ export const metadata = {
     },
   },
   verification: {
-    google: 'your-google-verification-code',
-    yandex: 'your-yandex-verification-code',
+    google: process.env.GOOGLE_SITE_VERIFICATION || '',
+    yandex: process.env.NEXT_PUBLIC_YANDEX_VERIFICATION || '',
   },
 }
 
@@ -101,13 +101,14 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "Organization",
+              "@type": ["LocalBusiness", "SoftwareCompany"],
               "name": siteConfig.name,
               "url": process.env.NEXT_PUBLIC_SITE_URL || 'https://aventurinetechsolutions.com',
               "logo": `${process.env.NEXT_PUBLIC_SITE_URL || 'https://aventurinetechsolutions.com'}/logo.png`,
               "description": "Professional software development company specializing in web development, mobile apps, and digital solutions.",
               "address": {
                 "@type": "PostalAddress",
+                "streetAddress": "Near RTC Bus Stand, Kavali",
                 "addressLocality": "Kavali",
                 "addressRegion": "Andhra Pradesh",
                 "postalCode": "524201",
@@ -115,7 +116,7 @@ export default function RootLayout({ children }) {
               },
               "contactPoint": {
                 "@type": "ContactPoint",
-                "telephone": "+91-XXXXXXXXXX",
+                "telephone": "+91-9123456789",
                 "contactType": "customer service",
                 "email": "aventurinetechsolutions@gmail.com"
               },
@@ -127,7 +128,9 @@ export default function RootLayout({ children }) {
               ],
               "foundingDate": "2015",
               "numberOfEmployees": "25+",
-              "areaServed": "Worldwide"
+              "priceRange": "₹₹",
+              "openingHours": "Mo-Sa 09:00-18:00",
+              "areaServed": ["Kavali", "Nellore", "Nellore District", "Andhra Pradesh", "India"]
             })
           }}
         />
