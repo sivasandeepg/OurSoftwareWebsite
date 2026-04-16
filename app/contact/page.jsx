@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useTheme } from 'next-themes'
 import Navbar from '../../components/Navbar'
@@ -9,11 +9,6 @@ import Button from '../../components/Button'
 import { siteConfig } from '../../config/siteConfig'
 
 export default function Contact() {
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
   const [formData, setFormData] = useState({
     name: '',
     email: '',

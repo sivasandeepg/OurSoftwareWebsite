@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { motion } from 'framer-motion'
 import { useTheme } from 'next-themes'
 import Navbar from '../../components/Navbar'
@@ -10,11 +10,6 @@ import TechStack from '../../components/TechStack'
 import { siteConfig } from '../../config/siteConfig'
 
 export default function Services() {
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
   // TODO: connect to CMS (Sanity/Contentful) for dynamic content
   const services = [
     {
@@ -198,11 +193,7 @@ export default function Services() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className={`rounded-2xl p-8 md:p-12 ${
-              mounted 
-                ? 'glass'
-                : 'bg-white border border-slate-200 shadow-md'
-            }`}
+            className="rounded-2xl p-8 md:p-12 bg-white border border-slate-200 shadow-md"
           >
             <h2 className={`font-heading text-3xl md:text-4xl font-bold mb-6 text-center ${
               'text-text-primary'

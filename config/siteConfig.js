@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "Aventurine Tech Solutions",
-  tagline: "Innovating Digital Future",
+  tagline: "Best Software Company in Kavali | Web & App Development Nellore",
   primaryColor: "#1a1a2e",
   secondaryColor: "#16213e",
   accentColor: "#0f3460",
@@ -13,17 +13,17 @@ export const siteConfig = {
     { label: "Contact", href: "/contact" },
   ],
   hero: {
-    title: "Welcome to Aventurine Tech Solutions",
-    subtitle: "Building cutting-edge digital solutions that transform businesses and empower innovation.",
+    title: "Best Software Company in Kavali | Transform Your Digital Presence",
+    subtitle: "Leading software development company in Kavali, Nellore District. Expert in web development, mobile apps, .NET software & AI agents for local businesses.",
     ctaText: "Start Your Project",
     ctaHref: "/contact",
-    badge: "✦ Trusted by 500+ businesses worldwide",
+    badge: "✦ #1 Software Company in Kavali | Serving Nellore District & Andhra Pradesh",
     backgroundImage: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80",
     // Hospital: https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=1920&q=80
     // Company:  https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80
     // Default:  https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1920&q=80
   },
-  footer: " 2025 Aventurine Tech Solutions. All rights reserved.",
+  footer: " 2025 Aventurine Tech Solutions, Kavali, Nellore District, Andhra Pradesh. All rights reserved.",
   footerLinks: {
     quickLinks: [
       { label: "Home", href: "/" },
@@ -40,15 +40,25 @@ export const siteConfig = {
   },
   social: {
     github: "#",
-    twitter: "#",
-    linkedin: "#",
-    instagram: "#",
+    twitter: "https://twitter.com/aventurine_tech",
+    linkedin: "https://www.linkedin.com/company/aventurine-tech-solutions",
+    instagram: "https://www.instagram.com/aventurinetechsolutions",
+  },
+  location: {
+    address: "Your Street Address, Kavali, Nellore District, Andhra Pradesh - 524201",
+    phone: "+91-XXXXXXXXXX",
+    email: "aventurinetechsolutions@gmail.com",
+    coordinates: {
+      lat: "14.9145",
+      lng: "79.9974"
+    },
+    serviceAreas: ["Kavali", "Nellore", "Nellore District", "Andhra Pradesh", "South India"]
   },
   stats: [
-    { label: "Projects Delivered", value: "500+", prefix: "" },
-    { label: "Happy Clients", value: "50+", prefix: "" },
-    { label: "Years of Experience", value: "10+", prefix: "" },
-    { label: "Team Members", value: "25+", prefix: "" }
+    { label: "Projects Delivered in Nellore", value: "500+", prefix: "" },
+    { label: "Happy Local Clients", value: "200+", prefix: "" },
+    { label: "Years Serving Kavali", value: "8+", prefix: "" },
+    { label: "Team Members", value: "15+", prefix: "" }
   ],
     theme: {
     dark: {
