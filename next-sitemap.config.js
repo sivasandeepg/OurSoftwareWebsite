@@ -5,4 +5,5 @@ module.exports = {
   changefreq: 'weekly',
   priority: 0.7,
   exclude: ['/api/*'],
+  outDir: './out',
 }
