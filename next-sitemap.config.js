@@ -2,6 +2,7 @@
 module.exports = {
   siteUrl: 'https://www.aventurinetechsolutions.com',
   generateRobotsTxt: false,
+  generateIndexSitemap: false,
   changefreq: 'weekly',
   priority: 0.7,
   exclude: ['/api/*', '/not-found', '/not-found/*', '/robots.txt', '/sitemap.xml'],
