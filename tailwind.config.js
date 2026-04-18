@@ -20,8 +20,10 @@ module.exports = {
         'text-muted': '#94A3B8',
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        inter: ['Inter', 'sans-serif'],
+        sans: ['var(--font-inter)', 'Inter', 'sans-serif'],
+        inter: ['var(--font-inter)', 'Inter', 'sans-serif'],
+        body: ['var(--font-inter)', 'Inter', 'sans-serif'],
+        heading: ['var(--font-playfair)', 'Playfair Display', 'serif'],
       },
       backdropBlur: {
         xs: '2px',

@@ -23,7 +23,7 @@ export const siteConfig = {
     // Company:  https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80
     // Default:  https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1920&q=80
   },
-  footer: " 2025 Aventurine Tech Solutions, Kavali, Nellore District, Andhra Pradesh. All rights reserved.",
+  footer: "Aventurine Tech Solutions, Kavali, Nellore District, Andhra Pradesh. All rights reserved.",
   footerLinks: {
     quickLinks: [
       { label: "Home", href: "/" },
@@ -39,14 +39,14 @@ export const siteConfig = {
     ],
   },
   social: {
-    github: "#",
+    github: "",
     twitter: "https://x.com/aventurine_tech",
     linkedin: "https://www.linkedin.com/company/aventurine-tech-solutions",
     instagram: "https://www.instagram.com/aventurinetechsolutions/",
   },
   location: {
-    address: "Your Street Address, Kavali, Nellore District, Andhra Pradesh - 524201",
-    phone: "+91-XXXXXXXXXX",
+    address: "Near RTC Bus Stand, Kavali, Nellore District, Andhra Pradesh - 524201",
+    phone: "+91-8328227728",
     email: "aventurinetechsolutions@gmail.com",
     coordinates: {
       lat: "14.9145",

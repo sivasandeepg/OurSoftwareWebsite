@@ -78,9 +78,9 @@ const Navbar = () => {
                 <div className="w-8 h-0.5 bg-primary mt-2"></div>
                 <div className="absolute top-1 right-0 w-2 h-2 bg-primary"></div>
               </div>
-              <h1 className="text-xl font-semibold text-text-primary tracking-tight">
+              <span className="text-xl font-semibold text-text-primary tracking-tight">
                 {siteConfig.name}
-              </h1>
+              </span>
             </motion.a>
 
             {/* Desktop Navigation */}

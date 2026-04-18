@@ -1,9 +1,7 @@
-# *
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /_next/
 
-# Host
 Host: https://www.aventurinetechsolutions.com
-
-# Sitemaps
 Sitemap: https://www.aventurinetechsolutions.com/sitemap.xml

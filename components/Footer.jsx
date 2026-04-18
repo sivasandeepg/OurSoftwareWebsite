@@ -124,7 +124,7 @@ const Footer = () => {
             </h4>
             <ul className="space-y-3">
               <li>
-                <a href="/services" className="text-sm text-text-muted hover:text-text-primary transition-colors duration-300">
+                <a href="/services/ai-solutions" className="text-sm text-text-muted hover:text-text-primary transition-colors duration-300">
                   AI Solutions
                 </a>
               </li>
@@ -157,7 +157,7 @@ const Footer = () => {
               Contact
             </h4>
             <div className="space-y-3">
-              <a href={`mailto:hello@${siteConfig.name.toLowerCase().replace(/\s+/g, '')}.com`} className="text-sm font-normal hover:opacity-80 transition-opacity">
+              <a href="mailto:aventurinetechsolutions@gmail.com" className="text-sm font-normal hover:opacity-80 transition-opacity">
                aventurinetechsolutions@gmail.com
               </a> 
               <a href="/contact" className="inline-block btn-outline text-sm">

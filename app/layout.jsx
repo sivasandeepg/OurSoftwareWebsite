@@ -1,14 +1,29 @@
-import { Inter } from 'next/font/google'
+import { Inter, Playfair_Display } from 'next/font/google'
 import './globals.css'
 import { siteConfig } from '../config/siteConfig'
 
 const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
+  variable: '--font-inter',
 })
 
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-playfair',
+})
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+}
+
 export const metadata = {
-  title: 'Aventurine Tech Solutions | Software Company Kavali, Nellore AP',
+  title: {
+    default: 'Aventurine Tech Solutions | Software Company Kavali, Nellore AP',
+    template: '%s | Aventurine Tech Solutions',
+  },
   description: 'Top software development company in Kavali, Nellore District, Andhra Pradesh. We build websites, Android & iOS apps, Node.js & Python backends, AI solutions.',
   keywords: [
     'software company Kavali',
@@ -26,9 +41,24 @@ export const metadata = {
     siteName: 'Aventurine Tech Solutions',
     locale: 'en_IN',
     type: 'website',
+    images: [
+      {
+        url: 'https://www.aventurinetechsolutions.com/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Aventurine Tech Solutions - Software Company Kavali',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Aventurine Tech Solutions | Software Company Kavali',
+    description: 'Custom Web, Android, iOS & AI solutions from Kavali, Nellore, AP.',
+    site: '@aventurine_tech',
+    images: ['https://www.aventurinetechsolutions.com/og-image.png'],
   },
   alternates: {
-    canonical: 'https://www.aventurinetechsolutions.com',
+    canonical: 'https://www.aventurinetechsolutions.com/',
   },
   verification: {
     google: 'QTKmtYBex_Aas0-og88iESyZ0gQ1_EnJT1diF6v5DCw',
@@ -38,25 +68,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-          <head>
-        {/* Preconnect to external domains for performance */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-        
+      <head>
         {/* Favicon */}
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        
+
         {/* Manifest for PWA */}
         <link rel="manifest" href="/site.webmanifest" />
-        
-        {/* DNS prefetch for external resources */}
-        <link rel="dns-prefetch" href="https://images.unsplash.com" />
-        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        
+
         {/* Structured Data for Organization */}
         <script
           type="application/ld+json"
@@ -65,9 +86,9 @@ export default function RootLayout({ children }) {
               "@context": "https://schema.org",
               "@type": ["LocalBusiness", "SoftwareCompany"],
               "name": siteConfig.name,
-              "url": process.env.NEXT_PUBLIC_SITE_URL || 'https://www.aventurinetechsolutions.com',
-              "logo": `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.aventurinetechsolutions.com'}/logo.png`,
-              "description": "Professional software development company specializing in web development, mobile apps, and digital solutions.",
+              "url": "https://www.aventurinetechsolutions.com",
+              "logo": "https://www.aventurinetechsolutions.com/logo.png",
+              "description": "Professional software development company specializing in web development, mobile apps, and digital solutions in Kavali, Nellore District, AP.",
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "Near RTC Bus Stand, Kavali",
@@ -83,20 +104,19 @@ export default function RootLayout({ children }) {
                 "email": "aventurinetechsolutions@gmail.com"
               },
               "sameAs": [
-                siteConfig.social.linkedin,
-                siteConfig.social.twitter,
-                siteConfig.social.github,
-                siteConfig.social.instagram
+                "https://www.linkedin.com/company/aventurine-tech-solutions",
+                "https://x.com/aventurine_tech",
+                "https://www.instagram.com/aventurinetechsolutions/"
               ],
               "foundingDate": "2015",
               "numberOfEmployees": "15",
-              "priceRange": "₹₹",
+              "priceRange": "$$",
               "openingHours": "Mo-Sa 09:00-18:00",
               "areaServed": ["Kavali", "Nellore", "Nellore District", "Andhra Pradesh", "India"]
             })
           }}
         />
-        
+
         {/* Structured Data for Website */}
         <script
           type="application/ld+json"
@@ -105,13 +125,8 @@ export default function RootLayout({ children }) {
               "@context": "https://schema.org",
               "@type": "WebSite",
               "name": siteConfig.name,
-              "url": process.env.NEXT_PUBLIC_SITE_URL || 'https://www.aventurinetechsolutions.com',
+              "url": "https://www.aventurinetechsolutions.com",
               "description": "Professional software development company specializing in web development, mobile apps, and digital solutions.",
-              "potentialAction": {
-                "@type": "SearchAction",
-                "target": `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.aventurinetechsolutions.com'}/search?q={search_term_string}`,
-                "query-input": "required name=search_term_string"
-              },
               "publisher": {
                 "@type": "Organization",
                 "name": siteConfig.name
@@ -120,7 +135,7 @@ export default function RootLayout({ children }) {
           }}
         />
       </head>
-      <body className={`${inter.className} font-body antialiased`}>
+      <body className={`${inter.variable} ${playfair.variable} font-body antialiased`}>
         {children}
       </body>
     </html>
