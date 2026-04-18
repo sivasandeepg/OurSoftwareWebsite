@@ -31,7 +31,7 @@ export const metadata = {
     canonical: 'https://www.aventurinetechsolutions.com',
   },
   verification: {
-    google: 'google5a3fe24c64fbe0a2',
+    google: 'QTKmtYBex_Aas0-og88iESyZ0gQ1_EnJT1diF6v5DCw',
   },
 }
 
