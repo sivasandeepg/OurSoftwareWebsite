@@ -30,6 +30,9 @@ export const metadata = {
   alternates: {
     canonical: 'https://www.aventurinetechsolutions.com',
   },
+  verification: {
+    google: 'google5a3fe24c64fbe0a2',
+  },
 }
 
 export default function RootLayout({ children }) {
