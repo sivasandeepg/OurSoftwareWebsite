@@ -65,8 +65,8 @@ export default function RootLayout({ children }) {
               "@context": "https://schema.org",
               "@type": ["LocalBusiness", "SoftwareCompany"],
               "name": siteConfig.name,
-              "url": process.env.NEXT_PUBLIC_SITE_URL || 'https://aventurinetechsolutions.com',
-              "logo": `${process.env.NEXT_PUBLIC_SITE_URL || 'https://aventurinetechsolutions.com'}/logo.png`,
+              "url": process.env.NEXT_PUBLIC_SITE_URL || 'https://www.aventurinetechsolutions.com',
+              "logo": `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.aventurinetechsolutions.com'}/logo.png`,
               "description": "Professional software development company specializing in web development, mobile apps, and digital solutions.",
               "address": {
                 "@type": "PostalAddress",
@@ -105,11 +105,11 @@ export default function RootLayout({ children }) {
               "@context": "https://schema.org",
               "@type": "WebSite",
               "name": siteConfig.name,
-              "url": process.env.NEXT_PUBLIC_SITE_URL || 'https://aventurinetechsolutions.com',
+              "url": process.env.NEXT_PUBLIC_SITE_URL || 'https://www.aventurinetechsolutions.com',
               "description": "Professional software development company specializing in web development, mobile apps, and digital solutions.",
               "potentialAction": {
                 "@type": "SearchAction",
-                "target": `${process.env.NEXT_PUBLIC_SITE_URL || 'https://aventurinetechsolutions.com'}/search?q={search_term_string}`,
+                "target": `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.aventurinetechsolutions.com'}/search?q={search_term_string}`,
                 "query-input": "required name=search_term_string"
               },
               "publisher": {
