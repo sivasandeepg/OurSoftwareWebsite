@@ -61,7 +61,7 @@ export const structuredData = {
         "longitude": siteConfig.location.coordinates.lng
       },
       "openingHours": "Mo-Fr 09:00-18:00",
-      "priceRange": "$$",
+      "priceRange": "INR",
       "paymentAccepted": "Cash, Credit Card, Bank Transfer",
       "currenciesAccepted": "INR",
       "areaServed": siteConfig.location.serviceAreas,

@@ -31,3 +31,21 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# documentation and guides (keep repository clean)
+*_GUIDE.md
+*_GUIDELINES.md
+SEO_*.md
+LOCAL_*.md
+BACKLINK_*.md
+GOOGLE_*.md
+*.guide.md
+*.tutorial.md
+
+# additional documentation files
+README_BACKUP.md
+NOTES.md
+TODO.md
+CHANGELOG.md
+CONTRIBUTING.md
+CODE_OF_CONDUCT.md

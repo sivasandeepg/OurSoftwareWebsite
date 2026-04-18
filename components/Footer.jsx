@@ -38,7 +38,7 @@ const Footer = () => {
               <h3 className="text-xs font-semibold uppercase tracking-widest text-text-primary">
                 {siteConfig.name}
               </h3>
-              <p className="text-sm leading-relaxed text-text-muted">
+              <p className="text-xs leading-relaxed text-text-muted">
                 {siteConfig.tagline}
               </p>
             </div>

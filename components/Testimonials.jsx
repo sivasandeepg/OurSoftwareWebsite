@@ -51,52 +51,52 @@ const Testimonials = () => {
   // TODO: connect to CMS (Sanity/Contentful) for dynamic content
   const testimonials = [
     {
-      name: "Rajesh Kumar",
-      role: "CEO, TechNova Solutions, Hyderabad",
-      content: "Aventurine Tech Solutions developed our enterprise software with exceptional quality. Their React and Node.js expertise transformed our business operations completely.",
+      name: "Srinivas Reddy",
+      role: "Owner, Sri Venkateswara Pharmacy, Kavali",
+      content: "Aventurine Tech Solutions built our pharmacy management system. The inventory tracking and billing software has reduced our manual work by 70%. Being local to Kavali, their team understood our needs perfectly.",
       rating: 5
     },
     {
-      name: "Dr. Priya Sharma",
-      role: "Principal, Greenwood International School, Bangalore",
-      content: "The school management system they built is outstanding. Student enrollment and academic tracking have become seamless processes for our institution.",
+      name: "Lakshmi Narayana",
+      role: "Principal, Narayana Junior College, Nellore",
+      content: "The student management system they developed works well for our college. Fee collection and attendance tracking are now automated. There were some initial issues but their team resolved them quickly.",
+      rating: 3
+    },
+    {
+      name: "Mohan Rao",
+      role: "Director, Rao Textiles, Kavali",
+      content: "Our e-commerce website was developed by Aventurine Tech Solutions. The online ordering system has increased our sales by 45%. Local support has been very helpful for quick updates.",
       rating: 5
     },
     {
-      name: "Dr. Vijay Reddy",
-      role: "Senior Cardiologist, Apollo Hospitals, Hyderabad",
-      content: "Their hospital management software improved our patient care significantly. The appointment system and electronic health records are game-changers.",
+      name: "Anjali Devi",
+      role: "Manager, Annapurna Restaurant, Nellore",
+      content: "The restaurant management app they built is perfect for our business. Table booking and food ordering systems work smoothly. Their understanding of local business needs is impressive.",
+      rating: 4
+    },
+    {
+      name: "Ramesh Babu",
+      role: "Owner, Babu Traders, Kavali",
+      content: "Our inventory management software has transformed our business. Real-time stock tracking and automated billing have saved us countless hours. Great local service!",
       rating: 5
     },
     {
-      name: "Ananya Patel",
-      role: "CTO, DigitalWave Technologies, Bangalore",
-      content: "The .NET development services are exceptional. They delivered our complex enterprise solution on time with perfect execution.",
+      name: "Sujatha Kumari",
+      role: "Administrator, Kavali General Hospital",
+      content: "The patient management system they developed works fine for our hospital. Appointment scheduling and medical records are now digital. Some features could be improved but overall it's functional.",
+      rating: 3
+    },
+    {
+      name: "Venkateshwarlu",
+      role: "Proprietor, Venkateshwara Hardware, Nellore",
+      content: "Our billing and accounting software works perfectly. The team customized it exactly for our hardware business needs. Local presence makes communication easy.",
       rating: 5
     },
     {
-      name: "Dr. Suresh Babu",
-      role: "Medical Director, CARE Hospitals, Vizag",
-      content: "TechVision's healthcare software solutions revolutionized our hospital operations. Patient management and billing systems are now fully automated.",
-      rating: 5
-    },
-    {
-      name: "Meera Naidu",
-      role: "Principal, Delhi Public School, Vizag",
-      content: "The educational platform they created enhanced our teaching methods. Online classes and student progress tracking have never been better.",
-      rating: 5
-    },
-    {
-      name: "Arjun Verma",
-      role: "Founder, StartupHub Bangalore",
-      content: "From concept to deployment, their team delivered excellence. The mobile app they built increased our user engagement by 400%. ",
-      rating: 5
-    },
-    {
-      name: "Kavita Malhotra",
-      role: "Operations Head, MedTech Solutions, Hyderabad",
-      content: "The microservices architecture they implemented made our system incredibly scalable. 24/7 support has been crucial for our healthcare operations.",
-      rating: 5
+      name: "Padma Latha",
+      role: "Owner, Padma Fashions, Kavali",
+      content: "The e-commerce website for our clothing store is beautiful and functional. Online orders have increased significantly. Being a local company, they understand our market well.",
+      rating: 4
     }
   ]
 

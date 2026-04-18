@@ -8,68 +8,27 @@ const inter = Inter({
 })
 
 export const metadata = {
-  title: {
-    default: `Software Development Company Kavali | Web & App Development Nellore`,
-    template: `%s | Aventurine Tech Solutions`
-  },
-  description: `Aventurine Tech Solutions: Leading software company in Kavali, Nellore District. Expert in web development, mobile apps, .NET software & AI agents. Transform your business today!`,
+  title: 'Aventurine Tech Solutions | Software Company Kavali, Nellore AP',
+  description: 'Top software development company in Kavali, Nellore District, Andhra Pradesh. We build websites, Android & iOS apps, Node.js & Python backends, AI solutions.',
   keywords: [
     'software company Kavali',
-    'software company Nellore',
-    'web development Kavali',
-    'mobile app development Nellore',
-    '.NET software development Andhra Pradesh',
-    'AI solutions Kavali'
+    'web development Nellore',
+    'android app development Andhra Pradesh',
+    'IT company Kavali',
+    'app development Nellore district',
+    'Python developer Andhra Pradesh',
+    'Node.js backend Nellore',
   ],
-  authors: [{ name: siteConfig.name }],
-  creator: siteConfig.name,
-  publisher: siteConfig.name,
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://aventurinetechsolutions.com'),
-  alternates: {
-    canonical: '/',
-  },
   openGraph: {
+    title: 'Aventurine Tech Solutions | Software Company Kavali',
+    description: 'Custom Web, Android, iOS & AI solutions from Kavali, Nellore, AP.',
+    url: 'https://www.aventurinetechsolutions.com',
+    siteName: 'Aventurine Tech Solutions',
+    locale: 'en_IN',
     type: 'website',
-    locale: 'en_US',
-    url: process.env.NEXT_PUBLIC_SITE_URL || 'https://aventurinetechsolutions.com',
-    title: `Software Development Company Kavali | Web & App Development Nellore`,
-    description: `Professional software development company specializing in web development, mobile apps, and digital solutions. Transform your business with cutting-edge technology.`,
-    siteName: siteConfig.name,
-    images: [
-      {
-        url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://aventurinetechsolutions.com'}/og-image.jpg`,
-        width: 1200,
-        height: 630,
-        alt: `${siteConfig.name} - Professional Software Development`,
-      },
-    ],
   },
-  twitter: {
-    card: 'summary_large_image',
-    title: `Software Development Company Kavali | Web & App Development Nellore`,
-    description: `Professional software development company specializing in web development, mobile apps, and digital solutions.`,
-    images: [`${process.env.NEXT_PUBLIC_SITE_URL || 'https://aventurinetechsolutions.com'}/og-image.jpg`],
-    creator: '@aventurine_tech',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  verification: {
-    google: process.env.GOOGLE_SITE_VERIFICATION || '',
-    yandex: process.env.NEXT_PUBLIC_YANDEX_VERIFICATION || '',
+  alternates: {
+    canonical: 'https://www.aventurinetechsolutions.com',
   },
 }
 
@@ -116,7 +75,7 @@ export default function RootLayout({ children }) {
               },
               "contactPoint": {
                 "@type": "ContactPoint",
-                "telephone": "+91-9123456789",
+                "telephone": "+91-8328227728",
                 "contactType": "customer service",
                 "email": "aventurinetechsolutions@gmail.com"
               },
@@ -127,7 +86,7 @@ export default function RootLayout({ children }) {
                 siteConfig.social.instagram
               ],
               "foundingDate": "2015",
-              "numberOfEmployees": "25+",
+              "numberOfEmployees": "15",
               "priceRange": "₹₹",
               "openingHours": "Mo-Sa 09:00-18:00",
               "areaServed": ["Kavali", "Nellore", "Nellore District", "Andhra Pradesh", "India"]
