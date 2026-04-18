@@ -41,7 +41,7 @@ export const siteConfig = {
   social: {
     github: "#",
     twitter: "https://x.com/aventurine_tech",
-    linkedin: "https://linkedin.com/in/aventurine-tech-solutions-b18b3b403",
+    linkedin: "https://www.linkedin.com/company/aventurine-tech-solutions",
     instagram: "https://www.instagram.com/aventurinetechsolutions/",
   },
   location: {
