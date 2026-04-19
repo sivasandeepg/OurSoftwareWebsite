@@ -73,8 +73,8 @@ export default function About() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className={`rounded-2xl p-8 md:p-12 ${
-              'glass'
+            className={`rounded-2xl p-8 md:p-12 card ${
+              'hover:-translate-y-1'
             }`}
           >
             <h1 className={`font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6 ${
@@ -124,8 +124,8 @@ export default function About() {
             
             <motion.div
               variants={itemVariants}
-              className={`rounded-2xl p-8 space-y-6 ${
-                'glass'
+              className={`rounded-2xl p-8 space-y-6 card ${
+                'hover:-translate-y-1'
               }`}
             >
               <div className="text-center">
@@ -199,11 +199,11 @@ export default function About() {
                 key={index}
                 variants={itemVariants}
                 whileHover={{ 
-                  scale: 1.05,
-                  boxShadow: "0 20px 40px rgba(0,0,0,0.3)"
+                  y: -5,
+                  transition: { duration: 0.3 }
                 }}
-                className={`rounded-xl p-6 text-center hover-glow ${
-                  'glass'
+                className={`rounded-xl p-6 text-center card group ${
+                  'transition-all duration-300 hover:-translate-y-1'
                 }`}
               >
                 {/* Placeholder Image */}
@@ -215,7 +215,7 @@ export default function About() {
                   </svg>
                 </div>
                 
-                <h3 className={`font-heading text-xl font-semibold mb-2 ${
+                <h3 className={`font-heading text-xl font-semibold mb-2 group-hover:text-primary transition-colors duration-300 ${
                   'text-text-primary'
                 }`}>
                   {member.name}
@@ -244,8 +244,8 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className={`rounded-2xl p-8 md:p-12 text-center ${
-              'glass'
+            className={`rounded-2xl p-8 md:p-12 text-center card ${
+              'hover:-translate-y-1'
               }`}
           >
             <h2 className={`font-heading text-3xl md:text-4xl font-bold mb-4 ${

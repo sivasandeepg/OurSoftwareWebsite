@@ -104,8 +104,8 @@ export default function Services() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className={`rounded-2xl p-8 md:p-12 ${
-              'glass'
+            className={`rounded-2xl p-8 md:p-12 card ${
+              'hover:-translate-y-1'
               }`}
           >
             <h1 className={`font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6 ${
@@ -137,11 +137,11 @@ export default function Services() {
                 key={index}
                 variants={itemVariants}
                 whileHover={{ 
-                  scale: 1.03,
-                  boxShadow: "0 20px 40px rgba(0,0,0,0.3)"
+                  y: -5,
+                  transition: { duration: 0.3 }
                 }}
-                className={`rounded-xl p-6 hover-glow h-full flex flex-col ${
-                  'glass hover-glow'
+                className={`rounded-xl p-6 h-full flex flex-col card group ${
+                  'transition-all duration-300 hover:-translate-y-1'
                 }`}
               >
                 {/* Icon */}
@@ -154,7 +154,7 @@ export default function Services() {
                 </div>
 
                 {/* Content */}
-                <h3 className={`font-heading text-xl font-semibold mb-3 ${
+                <h3 className={`font-heading text-xl font-semibold mb-3 group-hover:text-primary transition-colors duration-300 ${
                   'text-text-primary'
                 }`}>
                   {service.title}
@@ -192,7 +192,9 @@ export default function Services() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className={`rounded-xl p-6 md:p-8 glass hover-glow`}
+            className={`rounded-xl p-6 md:p-8 card ${
+              'hover:-translate-y-1'
+            }`}
           >
             <h2 className={`font-heading text-3xl md:text-4xl font-bold mb-6 text-center ${
               'text-text-primary'

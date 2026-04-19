@@ -131,8 +131,8 @@ export default function CaseStudies() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className={`rounded-2xl p-8 md:p-12 ${
-              'glass'
+            className={`rounded-2xl p-8 md:p-12 card ${
+              'hover:-translate-y-1'
             }`}
           >
             <h1 className={`font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6 ${
@@ -181,15 +181,15 @@ export default function CaseStudies() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`rounded-xl overflow-hidden hover-glow ${
-                  'glass hover-glow'
+                className={`rounded-xl overflow-hidden card group ${
+                  'transition-all duration-300 hover:-translate-y-1'
                 }`}
               >
                 <div className="p-6 md:p-8">
                   {/* Header */}
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
                     <div>
-                      <h3 className={`font-heading text-2xl md:text-3xl font-bold mb-2 ${
+                      <h3 className={`font-heading text-2xl md:text-3xl font-bold mb-2 group-hover:text-primary transition-colors duration-300 ${
                         'text-text-primary'
                       }`}>
                         {study.title}
@@ -328,8 +328,8 @@ export default function CaseStudies() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className={`rounded-2xl p-8 md:p-12 ${
-              'glass'
+            className={`rounded-2xl p-8 md:p-12 card ${
+              'hover:-translate-y-1'
             }`}
           >
             <h2 className={`font-heading text-3xl md:text-4xl font-bold mb-6 text-center ${

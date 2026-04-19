@@ -83,8 +83,8 @@ export default function Blog() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className={`rounded-2xl p-8 md:p-12 ${
-              'glass'
+            className={`rounded-2xl p-8 md:p-12 card ${
+              'hover:-translate-y-1'
             }`}
           >
             <h1 className={`font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6 ${
@@ -133,8 +133,8 @@ export default function Blog() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`rounded-xl overflow-hidden hover-glow h-full flex flex-col ${
-                  'glass hover-glow'
+                className={`rounded-xl overflow-hidden h-full flex flex-col card group ${
+                  'transition-all duration-300 hover:-translate-y-1'
                 }`}
               >
                 {/* Placeholder Image */}
@@ -160,7 +160,7 @@ export default function Blog() {
                   </div>
 
                   {/* Title */}
-                  <h3 className={`font-heading text-xl font-semibold mb-3 ${
+                  <h3 className={`font-heading text-xl font-semibold mb-3 group-hover:text-primary transition-colors duration-300 ${
                     'text-text-primary'
                   }`}>
                     {post.title}
@@ -199,8 +199,8 @@ export default function Blog() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className={`rounded-2xl p-8 md:p-12 ${
-              'glass'
+            className={`rounded-2xl p-8 md:p-12 card ${
+              'hover:-translate-y-1'
             }`}
           >
             <h2 className={`font-heading text-3xl md:text-4xl font-bold mb-6 text-center ${

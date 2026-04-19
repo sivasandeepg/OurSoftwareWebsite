@@ -13,6 +13,28 @@
     font-family: var(--font-inter), 'Inter', sans-serif;
     background-color: rgb(10, 10, 15);
     color: rgb(240, 240, 245);
+    @apply text-base leading-relaxed;
+    font-size: 16px;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl font-bold leading-tight tracking-tight;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl font-bold leading-tight;
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl font-semibold leading-snug;
+  }
+
+  h4 {
+    @apply text-lg font-semibold;
+  }
+
+  p {
+    @apply text-base leading-relaxed;
   }
 
   /* Grid background pattern */
@@ -43,16 +65,19 @@
     @apply bg-gradient-to-r from-blue-500 to-blue-600 text-white px-7 py-3.5 rounded-md font-inter font-medium;
     @apply transition-all duration-300 ease-in-out;
     @apply hover:scale-105 hover:shadow-lg hover:shadow-blue-500/50 hover:from-blue-600 hover:to-blue-700;
+    @apply active:scale-95 focus:ring-2 focus:ring-offset-2 focus:ring-primary/50;
   }
 
   .btn-secondary {
     @apply bg-transparent text-text-primary border border-border px-7 py-3.5 rounded-md transition-all duration-300 hover:bg-surface font-inter font-medium;
+    @apply active:scale-95 focus:ring-2 focus:ring-offset-2 focus:ring-primary/50;
   }
 
   .btn-outline {
     @apply bg-transparent text-primary border border-primary px-5 py-2.5 rounded-md font-inter font-medium;
     @apply transition-all duration-300 ease-in-out;
     @apply hover:bg-primary/10 hover:border-primary/70 hover:shadow-md hover:shadow-primary/30;
+    @apply active:scale-95 focus:ring-2 focus:ring-offset-2 focus:ring-primary/50;
   }
 
   /* Card styles */

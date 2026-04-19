@@ -85,7 +85,9 @@ export default function Contact() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className={`rounded-2xl p-8 md:p-12 glass`}
+            className={`rounded-2xl p-8 md:p-12 card ${
+              'hover:-translate-y-1'
+            }`}
           >
             <h1 className={`font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6`}>
               Contact Us
@@ -110,7 +112,9 @@ export default function Contact() {
               viewport={{ once: true }}
               className="space-y-8"
             >
-              <motion.div variants={itemVariants} className={`rounded-xl p-6 glass`}>
+              <motion.div variants={itemVariants} className={`rounded-xl p-6 card ${
+                'hover:-translate-y-1'
+              }`}>
                 <h3 className={`font-heading text-2xl font-semibold mb-4`}>
                   Get in Touch
                 </h3>
@@ -159,7 +163,9 @@ export default function Contact() {
                 </div>
               </motion.div>
 
-              <motion.div variants={itemVariants} className={`rounded-xl p-6 glass`}>
+              <motion.div variants={itemVariants} className={`rounded-xl p-6 card ${
+                'hover:-translate-y-1'
+              }`}>
                 <h3 className={`font-heading text-xl font-semibold mb-4`}>
                   Office Hours
                 </h3>
@@ -179,7 +185,9 @@ export default function Contact() {
                 </div>
               </motion.div>
 
-              <motion.div variants={itemVariants} className={`rounded-xl p-6 glass`}>
+              <motion.div variants={itemVariants} className={`rounded-xl p-6 card ${
+                'hover:-translate-y-1'
+              }`}>
                 <h3 className={`font-heading text-xl font-semibold mb-4`}>
                   Follow Us
                 </h3>
@@ -231,7 +239,9 @@ export default function Contact() {
               whileInView="visible"
               viewport={{ once: true }}
             >
-              <motion.div variants={itemVariants} className={`rounded-xl p-6 md:p-8 glass`}>
+              <motion.div variants={itemVariants} className={`rounded-xl p-6 md:p-8 card ${
+                'hover:-translate-y-1'
+              }`}>
                 <h3 className={`font-heading text-2xl font-semibold mb-6`}>
                   Send us a Message
                 </h3>
