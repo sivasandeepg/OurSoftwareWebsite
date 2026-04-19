@@ -153,7 +153,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <p className={`text-sm text-text-primary`}>Address</p>
-                      <p className={`text-slate-200`}>Hyderabad, Telangana</p>  
+                      <p className={`text-slate-200`}>Kavali, Nellore, Andhra Pradesh</p>    
                     </div>
                   </div>
                 </div>
