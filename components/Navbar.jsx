@@ -89,10 +89,10 @@ const Navbar = () => {
                 <motion.a
                   key={item.href}
                   href={item.href}
-                  className={`text-sm font-inter font-medium transition-all duration-300 tracking-wide ${
+                  className={`text-sm font-inter font-medium transition-all duration-300 ease-in-out tracking-wide ${
                     isActive(item.href) 
                       ? 'text-primary font-semibold' 
-                      : 'text-text-muted hover:text-text-primary'
+                      : 'text-text-muted hover:text-text-primary hover:text-primary'
                   }`}
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -106,7 +106,7 @@ const Navbar = () => {
               {/* CTA Button */}
               <motion.a
                 href="/contact"
-                className="rounded-md px-5 py-2.5 text-sm font-semibold border border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300"
+                className="rounded-md px-5 py-2.5 text-sm font-semibold border border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 ease-in-out"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.5 }}
@@ -186,10 +186,10 @@ const Navbar = () => {
                         key={item.href}
                         href={item.href}
                         onClick={() => setIsOpen(false)}
-                        className={`block px-4 py-3 rounded-lg text-lg font-medium transition-all duration-200 ${
+                        className={`block px-4 py-3 rounded-lg text-lg font-medium transition-all duration-300 ease-in-out ${
                           isActive(item.href) 
                             ? 'text-primary bg-primary/10 font-semibold' 
-                            : 'text-text-muted hover:text-text-primary hover:bg-surface'
+                            : 'text-text-muted hover:text-text-primary hover:bg-surface hover:text-primary'
                         }`}
                         initial={{ opacity: 0, x: 30 }}
                         animate={{ opacity: 1, x: 0 }}
@@ -204,7 +204,7 @@ const Navbar = () => {
                   <motion.a
                     href="/contact"
                     onClick={() => setIsOpen(false)}
-                    className="block w-full mt-8 rounded-md px-5 py-3 text-sm font-semibold text-center border border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300"
+                    className="block w-full mt-8 rounded-md px-5 py-3 text-sm font-semibold text-center border border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 ease-in-out"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.4 }}

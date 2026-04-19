@@ -9,8 +9,8 @@ const Hero = () => {
     visible: {
       opacity: 1,
       transition: {
-        duration: 0.8,
-        staggerChildren: 0.2
+        duration: 0.6,
+        staggerChildren: 0.15
       }
     }
   }
@@ -20,16 +20,26 @@ const Hero = () => {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.8, ease: 'easeOut' }
+      transition: { 
+        duration: 0.6, 
+        ease: [0.25, 0.46, 0.45, 0.94],
+        willChange: 'transform, opacity'
+      }
     }
   }
 
   const cardVariants = {
-    hidden: { opacity: 0, scale: 0.9 },
+    hidden: { opacity: 0, y: 50, scale: 0.85 },
     visible: {
       opacity: 1,
+      y: 0,
       scale: 1,
-      transition: { duration: 1, delay: 0.4, ease: 'easeOut' }
+      transition: { 
+        duration: 1.0, 
+        delay: 0.6, 
+        ease: [0.25, 0.46, 0.45, 0.94],
+        willChange: 'transform, opacity'
+      },
     },
     hover: {
       scale: 1.02,
@@ -55,6 +65,7 @@ const Hero = () => {
             {/* Badge */}
             <motion.div
               variants={itemVariants}
+              transition={{ delay: 0.1 }}
               className="inline-flex items-center px-4 py-2 border border-primary/20 bg-primary/10 rounded-full text-xs font-inter font-medium tracking-[0.1em] uppercase text-primary"
             >
               AI-Powered · Enterprise Ready
@@ -63,7 +74,13 @@ const Hero = () => {
             {/* Main headline */}
             <motion.h1
               variants={itemVariants}
-              className="font-extrabold font-inter text-5xl md:text-6xl lg:text-7xl leading-tight tracking-tight text-text-primary animate-fade-in-up"
+              transition={{ 
+                delay: 0.25,
+                duration: 0.5,
+                ease: [0.25, 0.46, 0.45, 0.94],
+                willChange: 'transform, opacity'
+              }}
+              className="font-extrabold font-inter text-3xl sm:text-4xl md:text-5xl lg:text-7xl leading-tight tracking-tight text-text-primary"
             >
               We Build Software
               <br />
@@ -73,29 +90,33 @@ const Hero = () => {
             {/* Subheadline */}
             <motion.p
               variants={itemVariants}
+              transition={{ delay: 0.4 }}
               className="text-lg md:text-xl font-normal max-w-2xl leading-relaxed text-text-muted"
             >
-              From AI agents to enterprise platforms — we engineer intelligent software that scales with your ambition.
+              Masters of 12+ Technologies — We build intelligent software that scales with your business.
             </motion.p>
 
             {/* CTA Buttons */}
             <motion.div
               variants={itemVariants}
-              className="flex flex-col sm:flex-row gap-4"
+              transition={{ delay: 0.55 }}
+              className="flex flex-col gap-4 sm:flex-row sm:gap-4"
             >
               <motion.a
                 href="/contact"
-                className="btn-primary"
+                className="btn-primary w-full sm:w-auto"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                aria-label="Start a new software project with us"
               >
                 Start a Project
               </motion.a>
               <motion.a
                 href="/case-studies"
-                className="btn-outline"
+                className="btn-outline w-full sm:w-auto"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                aria-label="View our software development portfolio and case studies"
               >
                 View Our Work
               </motion.a>
@@ -104,9 +125,10 @@ const Hero = () => {
             {/* Trust line */}
             <motion.p
               variants={itemVariants}
-              className="text-[13px] text-text-muted"
+              className="text-[13px] text-gray-300"
+              aria-label="Aventurine: Where Fortune Meets Code"
             >
-              Designing the Future of Fortune
+              Aventurine: Where Fortune Meets Code
             </motion.p>
           </div>
 
@@ -124,25 +146,25 @@ const Hero = () => {
               <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-primary to-secondary opacity-20 blur-sm"></div>
               
               {/* Card content */}
-              <div className="relative bg-surface rounded-lg p-4 border border-border">
+              <div className="relative bg-surface rounded-lg p-3 sm:p-4 border border-border overflow-x-auto">
                 {/* Fake code snippet */}
-                <div className="space-y-3 font-mono text-sm">
+                <div className="space-y-3 font-mono text-xs sm:text-sm min-w-max">
                   <div className="flex items-center space-x-2">
                     <div className="w-3 h-3 bg-red-500 rounded-full"></div>
                     <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
                     <div className="w-3 h-3 bg-green-500 rounded-full"></div>
                   </div>
-                  <div className="text-primary">// AI-powered automation</div>
-                  <div className="text-text-muted">
-                    <span className="text-primary">const</span> agent = <span className="text-primary">createAI</span>(&#123;
+                  <div className="text-gray-500 whitespace-nowrap">// AI-powered automation</div>
+                  <div className="text-gray-300 whitespace-nowrap">
+                    <span className="text-purple-400">const</span> agent = <span className="text-blue-400">createAI</span>(&#123;
                   </div>
-                  <div className="ml-4 text-text-muted">
-                    model: <span className="text-primary">'gpt-4'</span>,
+                  <div className="ml-4 text-gray-300 whitespace-nowrap">
+                    <span className="text-purple-400">model</span>: <span className="text-green-400">'gpt-4'</span>,
                   </div>
-                  <div className="ml-4 text-text-muted">
-                    capabilities: [<span className="text-primary">'analysis'</span>, <span className="text-primary">'automation'</span>]
+                  <div className="ml-4 text-gray-300 whitespace-nowrap">
+                    capabilities: [<span className="text-green-400">'analysis'</span>, <span className="text-green-400">'automation'</span>]
                   </div>
-                  <div className="text-text-muted">&#125;);</div>
+                  <div className="text-gray-300 whitespace-nowrap">&#125;);</div>
                 </div>
 
                 {/* Pulsing circle accent */}
