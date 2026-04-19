@@ -1,4 +1,5 @@
 import { Inter, Playfair_Display } from 'next/font/google'
+import Script from 'next/script'
 import './globals.css'
 import { siteConfig } from '../config/siteConfig'
 
@@ -79,61 +80,63 @@ export default function RootLayout({ children }) {
         <link rel="manifest" href="/site.webmanifest" />
 
         {/* Structured Data for Organization */}
-        <script
+        <Script
+          id="structured-data-organization"
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": ["LocalBusiness", "SoftwareCompany"],
-              "name": siteConfig.name,
-              "url": "https://www.aventurinetechsolutions.com",
-              "logo": "https://www.aventurinetechsolutions.com/logo.png",
-              "description": "Professional software development company specializing in web development, mobile apps, and digital solutions in Kavali, Nellore District, AP.",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "Near RTC Bus Stand, Kavali",
-                "addressLocality": "Kavali",
-                "addressRegion": "Andhra Pradesh",
-                "postalCode": "524201",
-                "addressCountry": "IN"
-              },
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+91-8328227728",
-                "contactType": "customer service",
-                "email": "aventurinetechsolutions@gmail.com"
-              },
-              "sameAs": [
-                "https://www.linkedin.com/company/aventurine-tech-solutions",
-                "https://x.com/aventurine_tech",
-                "https://www.instagram.com/aventurinetechsolutions/"
-              ],
-              "foundingDate": "2015",
-              "numberOfEmployees": "15",
-              "priceRange": "$$",
-              "openingHours": "Mo-Sa 09:00-18:00",
-              "areaServed": ["Kavali", "Nellore", "Nellore District", "Andhra Pradesh", "India"]
-            })
-          }}
-        />
+          strategy="beforeInteractive"
+        >
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": ["LocalBusiness", "SoftwareCompany"],
+            "name": siteConfig.name,
+            "url": "https://www.aventurinetechsolutions.com",
+            "logo": "https://www.aventurinetechsolutions.com/logo.png",
+            "description": "Professional software development company specializing in web development, mobile apps, and digital solutions in Kavali, Nellore District, AP.",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Near RTC Bus Stand, Kavali",
+              "addressLocality": "Kavali",
+              "addressRegion": "Andhra Pradesh",
+              "postalCode": "524201",
+              "addressCountry": "IN"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+91-8328227728",
+              "contactType": "customer service",
+              "email": "aventurinetechsolutions@gmail.com"
+            },
+            "sameAs": [
+              "https://www.linkedin.com/company/aventurine-tech-solutions",
+              "https://x.com/aventurine_tech",
+              "https://www.instagram.com/aventurinetechsolutions/"
+            ],
+            "foundingDate": "2015",
+            "numberOfEmployees": "15",
+            "priceRange": "$$",
+            "openingHours": "Mo-Sa 09:00-18:00",
+            "areaServed": ["Kavali", "Nellore", "Nellore District", "Andhra Pradesh", "India"]
+          })}
+        </Script>
 
         {/* Structured Data for Website */}
-        <script
+        <Script
+          id="structured-data-website"
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "WebSite",
-              "name": siteConfig.name,
-              "url": "https://www.aventurinetechsolutions.com",
-              "description": "Professional software development company specializing in web development, mobile apps, and digital solutions.",
-              "publisher": {
-                "@type": "Organization",
-                "name": siteConfig.name
-              }
-            })
-          }}
-        />
+          strategy="beforeInteractive"
+        >
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": siteConfig.name,
+            "url": "https://www.aventurinetechsolutions.com",
+            "description": "Professional software development company specializing in web development, mobile apps, and digital solutions.",
+            "publisher": {
+              "@type": "Organization",
+              "name": siteConfig.name
+            }
+          })}
+        </Script>
       </head>
       <body className={`${inter.variable} ${playfair.variable} font-body antialiased`}>
         {children}
