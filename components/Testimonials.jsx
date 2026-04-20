@@ -129,8 +129,8 @@ const Testimonials = () => {
             key={i}
             className={`w-5 h-5 ${
                 mounted && isDark 
-                  ? (i < rating ? 'text-yellow-400' : 'text-white/30')
-                  : (i < rating ? 'text-yellow-400' : 'text-gray-300')
+                  ? (i < rating ? 'text-star' : 'text-text-muted/30')
+                  : (i < rating ? 'text-star' : 'text-text-muted/30')
               }`}
             fill="currentColor"
             viewBox="0 0 20 20"
@@ -199,7 +199,7 @@ const Testimonials = () => {
           <button
             onClick={prevTestimonial}
             className={`absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 md:-translate-x-12 p-3 rounded-full transition-colors duration-200 z-10 ${
-                mounted && isDark ? 'bg-accent/20 hover:bg-accent/30 text-white' : 'bg-accent/20 hover:bg-accent/30 text-slate-800'
+                mounted && isDark ? 'bg-accent/20 hover:bg-accent/30 text-white' : 'bg-accent/20 hover:bg-accent/30 text-text-primary'
               }`}
             aria-label="Previous testimonial"
           >
@@ -210,7 +210,7 @@ const Testimonials = () => {
           <button
             onClick={nextTestimonial}
             className={`absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 md:translate-x-12 p-3 rounded-full transition-colors duration-200 z-10 ${
-                mounted && isDark ? 'bg-accent/20 hover:bg-accent/30 text-white' : 'bg-accent/20 hover:bg-accent/30 text-slate-800'
+                mounted && isDark ? 'bg-accent/20 hover:bg-accent/30 text-white' : 'bg-accent/20 hover:bg-accent/30 text-text-primary'
               }`}
             aria-label="Next testimonial"
           >
@@ -230,7 +230,7 @@ const Testimonials = () => {
                     ? 'bg-accent w-8'
                     : mounted && isDark
                       ? 'bg-white/30 hover:bg-white/50'
-                      : 'bg-slate-300 hover:bg-slate-400'
+                      : 'bg-text-muted/30 hover:bg-text-muted/50'
                 }`}
                 aria-label={`Go to testimonial ${index + 1}`}
               />

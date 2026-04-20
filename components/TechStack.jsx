@@ -167,14 +167,10 @@ const TechStack = () => {
             — Our Tech Stack —
           </motion.p>
           
-          <h2 className={`font-bold mb-4 ${
-            isDark ? 'text-white' : 'text-white'
-          }`}>
+          <h2 className="font-bold mb-4 text-text-primary">
             Technologies We Master
           </h2>
-          <p className={`max-w-2xl mx-auto ${
-            isDark ? 'text-white/80' : 'text-white/90'
-          }`}>
+          <p className="max-w-2xl mx-auto text-text-muted">
             Cutting-edge technologies and frameworks we use to build exceptional digital solutions
           </p>
         </motion.div>
@@ -201,7 +197,7 @@ const TechStack = () => {
                 <div className={`w-16 h-16 rounded-xl flex items-center justify-center mb-2 ${
                   isDark 
                     ? 'bg-white/10 backdrop-blur-md border border-white/20'
-                    : 'bg-slate-800/90 backdrop-blur-md border border-slate-600'
+                    : 'bg-surface backdrop-blur-md border border-border'
                 }`}>
                   <div style={{ color: tech.color }}>
                     {tech.icon}
@@ -209,9 +205,7 @@ const TechStack = () => {
                 </div>
 
                 {/* Tech Name */}
-                <h3 className={`font-medium text-center ${
-                  isDark ? 'text-white/90' : 'text-white/90'
-                }`}>
+                <h3 className="font-medium text-center text-text-primary">
                   {tech.name}
                 </h3>
               </div>

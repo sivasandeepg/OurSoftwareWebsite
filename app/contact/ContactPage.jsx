@@ -184,7 +184,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <p className={`text-text-primary`}>Email</p>
-                      <p className={`text-slate-200`}>aventurinetechsolutions@gmail.com</p> 
+                      <p className={`text-text-primary`}>aventurinetechsolutions@gmail.com</p> 
                     </div>
                   </div>
                     
@@ -196,7 +196,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <p className={`text-text-primary`}>Phone</p>
-                      <p className={`text-slate-200`}>+91 8328227728</p>
+                      <p className={`text-text-primary`}>+91 8328227728</p>
                     </div>
                   </div>
                   
@@ -209,7 +209,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <p className={`text-text-primary`}>Address</p>
-                      <p className={`text-slate-200`}>Kavali, Nellore, Andhra Pradesh</p>    
+                      <p className={`text-text-primary`}>Kavali, Nellore, Andhra Pradesh</p>    
                     </div>
                   </div>
                 </div>
@@ -221,7 +221,7 @@ export default function Contact() {
                 <h3 className={`font-semibold mb-4`}>
                   Office Hours
                 </h3>
-                <div className={`space-y-2 text-slate-600`}>
+                <div className={`space-y-2 text-text-muted`}>
                   <div className="flex justify-between">
                     <span>Monday - Friday</span>
                     <span>8:00 AM - 4:00 PM</span>
@@ -301,10 +301,10 @@ export default function Contact() {
                 {submitStatus && (
                   <div className={`mb-6 p-4 rounded-lg border ${
                     submitStatus.type === 'success'
-                      ? 'bg-green-500/20 border-green-500/30'
-                      : 'bg-red-500/20 border-red-500/30'
+                      ? 'bg-success/20 border-success/30'
+                      : 'bg-error/20 border-error/30'
                   }`}>
-                    <p className={submitStatus.type === 'success' ? 'text-green-300' : 'text-red-300'}>
+                    <p className={submitStatus.type === 'success' ? 'text-success' : 'text-error'}>
                       {submitStatus.message}
                     </p>
                   </div>

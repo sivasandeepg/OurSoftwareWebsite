@@ -18,6 +18,10 @@ module.exports = {
         accent: '#60A5FA',
         'text-primary': '#E2E8F0',
         'text-muted': '#94A3B8',
+        success: '#22C55E',
+        error: '#EF4444',
+        warning: '#F59E0B',
+        star: '#FACC15',
       },
       fontFamily: {
         sans: ['var(--font-jakarta)', 'Inter', 'system-ui', 'sans-serif'],

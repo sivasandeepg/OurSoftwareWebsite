@@ -29,9 +29,9 @@ const Button = ({
   const baseClasses = 'inline-flex items-center justify-center font-medium rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2'
   
   const variants = {
-    primary: getThemeClass('bg-accent text-white hover:bg-accent/90 focus:ring-accent', 'bg-[#0f3460] text-white hover:bg-[#0a2545] focus:ring-[#0f3460]'),
-    outline: getThemeClass('border-2 border-white text-white hover:bg-white hover:text-primary focus:ring-white', 'border-2 border-[#0f3460] text-[#0f3460] hover:bg-[#0f3460] hover:text-white focus:ring-[#0f3460]'),
-    ghost: getThemeClass('text-white hover:bg-white/10 focus:ring-white', 'text-slate-700 hover:bg-slate-100 focus:ring-slate-300')
+    primary: getThemeClass('bg-accent text-white hover:bg-accent/90 focus:ring-accent', 'bg-primary text-white hover:bg-primary/90 focus:ring-primary'),
+    outline: getThemeClass('border-2 border-white text-white hover:bg-white hover:text-primary focus:ring-white', 'border-2 border-primary text-primary hover:bg-primary hover:text-white focus:ring-primary'),
+    ghost: getThemeClass('text-white hover:bg-white/10 focus:ring-white', 'text-text-primary hover:bg-surface focus:ring-border')
   }
   
   const sizes = {

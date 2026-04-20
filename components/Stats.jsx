@@ -100,7 +100,7 @@ const Stats = () => {
                 mounted && isDark
                   ? 'glass'
                   : mounted
-                    ? 'bg-white border border-slate-200 shadow-sm'
+                    ? 'bg-surface border border-border shadow-sm'
                     : 'glass'
               }`}
         >
@@ -112,7 +112,7 @@ const Stats = () => {
                 className="text-center"
               >
                 <div className={`font-bold mb-2 ${
-                  mounted && isDark ? 'text-white' : 'text-gray-900'
+                  mounted && isDark ? 'text-text-primary' : 'text-text-primary'
                 }`}>
                   {Math.round(stat.current)}
                   {stat.suffix && (
@@ -122,7 +122,7 @@ const Stats = () => {
                   )}
                 </div>
                 <div className={`uppercase tracking-wide ${
-                  mounted && isDark ? 'text-white/70' : 'text-gray-600'
+                  mounted && isDark ? 'text-text-muted' : 'text-text-muted'
                 }`}>
                   {stat.label}
                 </div>
