@@ -250,7 +250,7 @@ export default function Services() {
                 <p className={`leading-relaxed ${
                   'text-muted'
                 }`}>
-                  With 500+ successful projects delivered, we have a proven track record of creating software that drives business growth and innovation.
+                  With 50+ successful projects delivered, we have a proven track record of creating software that drives business growth and innovation.
                 </p>
               </div>
             </div>

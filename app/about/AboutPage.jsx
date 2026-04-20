@@ -36,7 +36,7 @@ export default function About() {
       image: "/images/team/lead-dev.jpg"
     },
     {
-      name: "Aabhinandana",
+      name: "Abhinandana",
       role: "Head of Design",
       bio: "Creative director focused on user experience and innovative design solutions.",
       image: "/images/team/design.jpg"
@@ -112,10 +112,10 @@ export default function About() {
                 'text-muted'
               }`}>
                 <p>
-                  Founded with a vision to revolutionize the digital landscape, {siteConfig.name} has been at the forefront of software innovation for over 15 years. Our journey began with a simple mission: to transform businesses through cutting-edge technology solutions.
+                  Founded with a vision to revolutionize the digital landscape, {siteConfig.name} has been at the forefront of software innovation for over 5 years. Our journey began with a simple mission: to transform businesses through cutting-edge technology solutions.
                 </p>
                 <p>
-                  Today, we stand proud as a leading software development company, having delivered 500+ successful projects that have helped businesses across various industries achieve digital transformation and growth.
+                  Today, we stand proud as a leading software development company, having delivered 50+ successful projects that have helped businesses across various industries achieve digital transformation and growth.
                 </p>
                 <p>
                   Our commitment to innovation, coupled with our dedication to technical excellence and client success, makes us unique in the software development landscape.
