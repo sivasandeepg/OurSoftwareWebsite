@@ -7,6 +7,24 @@ import Footer from '../../components/Footer'
 import Button from '../../components/Button'
 import { siteConfig } from '../../config/siteConfig'
 
+// ============================================================
+// EMAIL PROVIDER CONFIG — Switch easily between providers
+// ============================================================
+const EMAIL_PROVIDER = 'emailjs' // 'emailjs' or 'web3forms'
+
+// EmailJS config — Get these from https://www.emailjs.com/
+const EMAILJS_CONFIG = {
+  serviceId: 'service_s5e2sem',              // EmailJS > Email Services > Service ID
+  templateId: 'template_wf402ki',            // EmailJS > Email Templates > Template ID
+  publicKey: 'BS99goKy45zd0DpVc',            // EmailJS > Account > Public Key
+}
+
+// Web3Forms config — Get key from https://web3forms.com/
+const WEB3FORMS_CONFIG = {
+  accessKey: 'YOUR_WEB3FORMS_ACCESS_KEY',
+}
+// ============================================================
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
@@ -16,7 +34,7 @@ export default function Contact() {
     message: ''
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitStatus, setSubmitStatus] = useState('')
+  const [submitStatus, setSubmitStatus] = useState(null)
 
   const handleChange = (e) => {
     setFormData({
@@ -25,33 +43,67 @@ export default function Contact() {
     })
   }
 
-  const handleSubmit = (e) => {
+  // EmailJS sender (REST API — no SDK needed)
+  const sendWithEmailJS = async () => {
+    const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        service_id: EMAILJS_CONFIG.serviceId,
+        template_id: EMAILJS_CONFIG.templateId,
+        user_id: EMAILJS_CONFIG.publicKey,
+        template_params: {
+          from_name: formData.name,
+          from_email: formData.email,
+          phone: formData.phone,
+          subject: formData.subject,
+          message: formData.message,
+        },
+      }),
+    })
+    return response.ok
+  }
+
+  // Web3Forms sender
+  const sendWithWeb3Forms = async () => {
+    const response = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        access_key: WEB3FORMS_CONFIG.accessKey,
+        subject: `New Contact: ${formData.subject}`,
+        from_name: formData.name,
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        message: formData.message,
+      }),
+    })
+    const result = await response.json()
+    return result.success
+  }
+
+  const handleSubmit = async (e) => {
     e.preventDefault()
     setIsSubmitting(true)
-    
-    // TODO: replace static form with API route when going dynamic
-    // For now, using Formspree or mailto as fallback
-    const { name, email, phone, subject, message } = formData
-    
-    // Create mailto link
-    const mailtoBody = `Name: ${name}%0D%0AEmail: ${email}%0D%0APhone: ${phone}%0D%0A%0D%0AMessage:%0D%0A${message}`
-    const mailtoLink = `mailto:aventurineitsolutions@gmail.com?subject=${encodeURIComponent(subject)}&body=${mailtoBody}`
-    
-    // Open email client
-    window.location.href = mailtoLink
-    
-    // Show success message
-    setSubmitStatus('Thank you for your message! Your email client should open with the details pre-filled.')
-    setIsSubmitting(false)
-    
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      subject: '',
-      message: ''
-    })
+    setSubmitStatus(null)
+
+    try {
+      const success = EMAIL_PROVIDER === 'emailjs'
+        ? await sendWithEmailJS()
+        : await sendWithWeb3Forms()
+
+      if (success) {
+        setSubmitStatus({ type: 'success', message: 'Thank you! Your message has been sent successfully. We\'ll get back to you soon.' })
+        setFormData({ name: '', email: '', phone: '', subject: '', message: '' })
+      } else {
+        setSubmitStatus({ type: 'error', message: 'Something went wrong. Please try again or email us directly.' })
+      }
+    } catch {
+      setSubmitStatus({ type: 'error', message: 'Network error. Please check your connection and try again.' })
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const containerVariants = {
@@ -247,8 +299,14 @@ export default function Contact() {
                 </h3>
                 
                 {submitStatus && (
-                  <div className="mb-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg">
-                    <p className="text-green-300">{submitStatus}</p>
+                  <div className={`mb-6 p-4 rounded-lg border ${
+                    submitStatus.type === 'success'
+                      ? 'bg-green-500/20 border-green-500/30'
+                      : 'bg-red-500/20 border-red-500/30'
+                  }`}>
+                    <p className={submitStatus.type === 'success' ? 'text-green-300' : 'text-red-300'}>
+                      {submitStatus.message}
+                    </p>
                   </div>
                 )}
                 
@@ -310,7 +368,7 @@ export default function Contact() {
                       className={`w-full px-4 py-3 rounded-lg focus:outline-none focus:border-accent transition-colors duration-200 ${
                       'bg-surface/50 border border text-text-primary placeholder-text-muted focus:border-primary'
                     }`}
-                      placeholder="(555) 123-4567"
+                      placeholder="+91 9876543210"
                     />
                   </div>
                   
@@ -365,7 +423,7 @@ export default function Contact() {
                 </form>
                 
                 <p className={`mt-4 ${'text-muted'}`}>
-                  * Required fields. This form will open your email client with the details pre-filled.
+                  * Required fields. Your message will be sent directly to our team.
                 </p>
               </motion.div>
             </motion.div>
