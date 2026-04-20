@@ -5,24 +5,34 @@ import { motion } from 'framer-motion'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import Button from '../../components/Button'
+import ApplicationForm from '../../components/ApplicationForm'
 import { siteConfig } from '../../config/siteConfig'
 
 export default function Careers() {
   const [mounted, setMounted] = useState(false)
+  const [showApplicationForm, setShowApplicationForm] = useState(false)
+  const [selectedPosition, setSelectedPosition] = useState('')
 
   useEffect(() => {
     setMounted(true)
   }, [])
 
+  const handleApplyClick = (positionTitle) => {
+    setSelectedPosition(positionTitle)
+    setShowApplicationForm(true)
+  }
+
+  const handleCloseForm = () => {
+    setShowApplicationForm(false)
+    setSelectedPosition('')
+  }
+
+  const handleApplicationSubmit = (formData) => {
+    console.log('Application submitted:', formData)
+    // Here you would typically send the data to your backend
+  }
+
   const openPositions = [
-    {
-      title: "Senior Full Stack Developer",
-      department: "Engineering",
-      location: "Remote",
-      type: "Full-time",
-      experience: "5+ years",
-      description: "We're looking for an experienced full stack developer to join our growing team and help build amazing software solutions."
-    },
     {
       title: "UI/UX Designer",
       department: "Design",
@@ -38,30 +48,6 @@ export default function Careers() {
       type: "Full-time",
       experience: "4+ years",
       description: "Help us build and maintain scalable infrastructure and deployment pipelines for our applications."
-    },
-    {
-      title: "Project Manager",
-      department: "Management",
-      location: "Hybrid",
-      type: "Full-time",
-      experience: "5+ years",
-      description: "Lead our software projects and ensure successful delivery for our clients."
-    },
-    {
-      title: "Machine Learning Engineer",
-      department: "AI/ML",
-      location: "Remote",
-      type: "Full-time",
-      experience: "3+ years",
-      description: "Develop and deploy machine learning models to solve real-world business problems."
-    },
-    {
-      title: "Junior Frontend Developer",
-      department: "Engineering",
-      location: "Remote",
-      type: "Full-time",
-      experience: "1-2 years",
-      description: "Start your career with us and learn modern frontend development technologies."
     }
   ]
 
@@ -248,7 +234,7 @@ export default function Careers() {
                     </div>
                   </div>
                   <div className="mt-4 lg:mt-0 lg:ml-6">
-                    <Button href="/contact" variant="outline">
+                    <Button onClick={() => handleApplyClick(position.title)} variant="outline">
                       Apply Now
                     </Button>
                   </div>
@@ -331,6 +317,15 @@ export default function Careers() {
       </section>
 
       <Footer />
+      
+      {/* Application Form Modal */}
+      {showApplicationForm && (
+        <ApplicationForm
+          position={selectedPosition}
+          onClose={handleCloseForm}
+          onSubmit={handleApplicationSubmit}
+        />
+      )}
     </main>
   )
 }
