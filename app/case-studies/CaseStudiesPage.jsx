@@ -6,6 +6,7 @@ import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import Button from '../../components/Button'
 import { siteConfig } from '../../config/siteConfig'
+import { cardStyles, cardTitleStyles } from '../../lib/styles'
 
 export default function CaseStudies() {
   const [mounted, setMounted] = useState(false)
@@ -135,12 +136,12 @@ export default function CaseStudies() {
               'hover:-translate-y-1'
             }`}
           >
-            <h1 className={`font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6 ${
+            <h1 className={`font-bold mb-6 ${
               'text-text-primary'
             }`}>
               Case Studies
             </h1>
-            <p className={`text-lg md:text-xl leading-relaxed ${
+            <p className={`leading-relaxed ${
               'text-muted'
             }`}>
               Discover how we've helped businesses transform their operations and achieve remarkable results.
@@ -157,7 +158,7 @@ export default function CaseStudies() {
               <button
                 key={index}
                 onClick={() => setSelectedIndustry(industry)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                className={`px-4 py-2 rounded-full font-medium transition-colors ${
                   selectedIndustry === industry
                     ? 'bg-secondary text-white'
                     : 'bg-secondary/20 text-secondary hover:bg-secondary/30'
@@ -181,26 +182,24 @@ export default function CaseStudies() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`rounded-xl overflow-hidden card group ${
-                  'transition-all duration-300 hover:-translate-y-1'
-                }`}
+                className={`rounded-xl overflow-hidden ${cardStyles}`}
               >
                 <div className="p-6 md:p-8">
                   {/* Header */}
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
                     <div>
-                      <h3 className={`font-heading text-2xl md:text-3xl font-bold mb-2 group-hover:text-primary transition-colors duration-300 ${
+                      <h3 className={`${cardTitleStyles} ${
                         'text-text-primary'
                       }`}>
                         {study.title}
                       </h3>
                       <div className="flex flex-wrap items-center gap-3">
-                        <span className={`text-sm font-medium px-3 py-1 rounded-full ${
+                        <span className={`font-medium px-3 py-1 rounded-full ${
                           'bg-secondary/20 text-secondary'
                         }`}>
                           {study.industry}
                         </span>
-                        <span className={`text-sm ${
+                        <span className={`${
                           'text-muted'
                         }`}>
                           {study.client}
@@ -217,7 +216,7 @@ export default function CaseStudies() {
                   {/* Challenge & Solution */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                     <div>
-                      <h4 className={`font-heading text-lg font-semibold mb-3 ${
+                      <h4 className={`font-semibold mb-3 ${
                         'text-text-primary'
                       }`}>
                         The Challenge
@@ -229,7 +228,7 @@ export default function CaseStudies() {
                       </p>
                     </div>
                     <div>
-                      <h4 className={`font-heading text-lg font-semibold mb-3 ${
+                      <h4 className={`font-semibold mb-3 ${
                         'text-text-primary'
                       }`}>
                         Our Solution
@@ -244,7 +243,7 @@ export default function CaseStudies() {
 
                   {/* Results */}
                   <div className="mb-6">
-                    <h4 className={`font-heading text-lg font-semibold mb-3 ${
+                    <h4 className={`font-semibold mb-3 ${
                       'text-text-primary'
                     }`}>
                       Key Results
@@ -255,7 +254,7 @@ export default function CaseStudies() {
                           <svg className="w-5 h-5 text-secondary mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                           </svg>
-                          <span className={`text-sm ${
+                          <span className={`${
                             'text-text-primary'
                           }`}>
                             {result}
@@ -269,7 +268,7 @@ export default function CaseStudies() {
                   <div className="border-t pt-6">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                       <div>
-                        <h5 className={`font-heading text-sm font-semibold mb-2 ${
+                        <h5 className={`font-semibold mb-2 ${
                           'text-muted'
                         }`}>
                           Technologies Used
@@ -278,7 +277,7 @@ export default function CaseStudies() {
                           {study.technologies.map((tech, techIndex) => (
                             <span
                               key={techIndex}
-                              className={`text-xs px-2 py-1 rounded ${
+                              className={`px-2 py-1 rounded ${
                                 'bg-secondary/10 text-secondary'
                               }`}
                             >
@@ -288,24 +287,24 @@ export default function CaseStudies() {
                         </div>
                       </div>
                       <div>
-                        <h5 className={`font-heading text-sm font-semibold mb-2 ${
+                        <h5 className={`font-semibold mb-2 ${
                           'text-muted'
                         }`}>
                           Duration
                         </h5>
-                        <p className={`text-sm ${
+                        <p className={`${
                           'text-text-primary'
                         }`}>
                           {study.duration}
                         </p>
                       </div>
                       <div>
-                        <h5 className={`font-heading text-sm font-semibold mb-2 ${
+                        <h5 className={`font-semibold mb-2 ${
                           'text-muted'
                         }`}>
                           Team Size
                         </h5>
-                        <p className={`text-sm ${
+                        <p className={`${
                           'text-text-primary'
                         }`}>
                           {study.teamSize}
@@ -332,12 +331,12 @@ export default function CaseStudies() {
               'hover:-translate-y-1'
             }`}
           >
-            <h2 className={`font-heading text-3xl md:text-4xl font-bold mb-6 text-center ${
+            <h2 className={`font-bold mb-6 text-center ${
               'text-text-primary'
             }`}>
               Ready to Achieve Similar Results?
             </h2>
-            <p className={`text-lg mb-8 text-center ${
+            <p className={`mb-8 text-center ${
               'text-muted'
             }`}>
               Let's discuss how we can help transform your business with our software solutions.

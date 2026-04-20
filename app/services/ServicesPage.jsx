@@ -7,6 +7,7 @@ import Footer from '../../components/Footer'
 import Button from '../../components/Button'
 import TechStack from '../../components/TechStack'
 import { siteConfig } from '../../config/siteConfig'
+import { cardStyles, cardTitleStyles } from '../../lib/styles'
 
 export default function Services() {
   // TODO: connect to CMS (Sanity/Contentful) for dynamic content
@@ -108,12 +109,12 @@ export default function Services() {
               'hover:-translate-y-1'
               }`}
           >
-            <h1 className={`font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6 ${
+            <h1 className={`font-bold mb-6 ${
               'text-text-primary'
             }`}>
               Our Software Development Services
             </h1>
-            <p className={`text-lg md:text-xl leading-relaxed ${
+            <p className={`leading-relaxed ${
               'text-muted'
             }`}>
               Discover comprehensive software development solutions we offer at {siteConfig.name}
@@ -140,9 +141,7 @@ export default function Services() {
                   y: -5,
                   transition: { duration: 0.3 }
                 }}
-                className={`rounded-xl p-6 h-full flex flex-col card group ${
-                  'transition-all duration-300 hover:-translate-y-1'
-                }`}
+                className={`rounded-xl p-6 h-full flex flex-col ${cardStyles}`}
               >
                 {/* Icon */}
                 <div className={`w-16 h-16 rounded-lg flex items-center justify-center mb-4 ${
@@ -154,7 +153,7 @@ export default function Services() {
                 </div>
 
                 {/* Content */}
-                <h3 className={`font-heading text-xl font-semibold mb-3 group-hover:text-primary transition-colors duration-300 ${
+                <h3 className={`${cardTitleStyles} ${
                   'text-text-primary'
                 }`}>
                   {service.title}
@@ -168,7 +167,7 @@ export default function Services() {
                 {/* Features */}
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className={`flex items-center text-sm ${
+                    <li key={featureIndex} className={`flex items-center ${
                       'text-muted'
                     }`}>
                       <svg className="w-4 h-4 text-secondary mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -196,7 +195,7 @@ export default function Services() {
               'hover:-translate-y-1'
             }`}
           >
-            <h2 className={`font-heading text-3xl md:text-4xl font-bold mb-6 text-center ${
+            <h2 className={`font-bold mb-6 text-center ${
               'text-text-primary'
             }`}>
               Why Choose Our Software Solutions?
@@ -204,7 +203,7 @@ export default function Services() {
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
               <div>
-                <h3 className={`font-heading text-xl font-semibold mb-3 ${
+                <h3 className={`font-semibold mb-3 ${
                   'text-text-primary'
                 }`}>
                   Cutting-Edge Technology
@@ -217,7 +216,7 @@ export default function Services() {
               </div>
               
               <div>
-                <h3 className={`font-heading text-xl font-semibold mb-3 ${
+                <h3 className={`font-semibold mb-3 ${
                   'text-text-primary'
                 }`}>
                   Expert Development Team
@@ -230,7 +229,7 @@ export default function Services() {
               </div>
               
               <div>
-                <h3 className={`font-heading text-xl font-semibold mb-3 ${
+                <h3 className={`font-semibold mb-3 ${
                   'text-text-primary'
                 }`}>
                   Agile Development Process
@@ -243,7 +242,7 @@ export default function Services() {
               </div>
               
               <div>
-                <h3 className={`font-heading text-xl font-semibold mb-3 ${
+                <h3 className={`font-semibold mb-3 ${
                   'text-text-primary'
                 }`}>
                   Proven Track Record

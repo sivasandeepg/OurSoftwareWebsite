@@ -141,10 +141,10 @@ const CaseStudies = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="font-bold font-inter text-3xl md:text-4xl lg:text-5xl text-text-primary mb-4">
+          <h2 className="font-bold font-inter text-text-primary mb-4">
             Case Studies
           </h2>
-          <p className="text-lg text-text-muted max-w-2xl mx-auto">
+          <p className="text-text-muted max-w-2xl mx-auto">
             Discover how we've helped businesses transform their digital presence with innovative solutions
           </p>
         </motion.div>
@@ -170,7 +170,7 @@ const CaseStudies = () => {
                   <svg className="w-12 h-12 mx-auto mb-2 text-text-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                   </svg>
-                  <p className="text-sm text-text-muted">Project Preview</p>
+                  <p className="text-text-muted">Project Preview</p>
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                 
@@ -178,10 +178,10 @@ const CaseStudies = () => {
 
               {/* Content */}
               <div className="p-6">
-                <h3 className="font-semibold font-inter text-sm text-text-primary mb-2 line-clamp-1">
+                <h3 className="font-semibold font-inter text-text-primary mb-2 line-clamp-1">
                   {caseStudy.title}
                 </h3>
-                <p className="text-xs text-text-muted mb-3 leading-relaxed line-clamp-2">
+                <p className="text-text-muted mb-3 leading-relaxed line-clamp-2">
                   {caseStudy.description}
                 </p>
 
@@ -223,10 +223,10 @@ const CaseStudies = () => {
                 <div className="rounded-lg p-3 bg-primary/10">
                   <div className="flex items-center justify-between">
                     <div>
-                      <div className="text-lg font-bold text-text-primary">
+                      <div className="font-bold text-text-primary">
                         {caseStudy.results.value}
                       </div>
-                      <div className="text-xs text-text-muted">
+                      <div className="text-text-muted">
                         {caseStudy.results.metric}
                       </div>
                     </div>

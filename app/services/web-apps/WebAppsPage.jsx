@@ -56,12 +56,12 @@ export default function WebApps() {
               'glass'
             }`}
           >
-            <h1 className={`font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6 ${
+            <h1 className={`font-bold mb-6 ${
               'text-text-primary'
             }`}>
               Web Application Development
             </h1>
-            <p className={`text-lg md:text-xl leading-relaxed ${
+            <p className={`leading-relaxed ${
               'text-muted'
             }`}>
               Create powerful, scalable, and user-friendly web applications that drive business growth.
@@ -85,7 +85,7 @@ export default function WebApps() {
                   'glass hover-glow'
                 }`}
               >
-                <h3 className={`font-heading text-xl font-semibold mb-3 ${
+                <h3 className={`font-semibold mb-3 ${
                   'text-text-primary'
                 }`}>
                   {service.title}
@@ -97,7 +97,7 @@ export default function WebApps() {
                 </p>
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className={`flex items-center text-sm ${
+                    <li key={featureIndex} className={`flex items-center ${
                       'text-muted'
                     }`}>
                       <svg className="w-4 h-4 text-secondary mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -125,7 +125,7 @@ export default function WebApps() {
               'glass'
             }`}
           >
-            <h2 className={`font-heading text-3xl md:text-4xl font-bold mb-6 text-center ${
+            <h2 className={`font-bold mb-6 text-center ${
               'text-text-primary'
             }`}>
               Our Technology Stack
@@ -134,7 +134,7 @@ export default function WebApps() {
               {techStack.map((tech, index) => (
                 <span
                   key={index}
-                  className={`px-4 py-2 rounded-full text-sm font-medium ${
+                  className={`px-4 py-2 rounded-full font-medium ${
                     'bg-secondary/20 text-secondary'
                   }`}
                 >
@@ -158,7 +158,7 @@ export default function WebApps() {
               'glass'
             }`}
           >
-            <h2 className={`font-heading text-3xl md:text-4xl font-bold mb-6 text-center ${
+            <h2 className={`font-bold mb-6 text-center ${
               'text-text-primary'
             }`}>
               Our Development Process
@@ -170,12 +170,12 @@ export default function WebApps() {
                 }`}>
                   <span className="font-bold">1</span>
                 </div>
-                <h3 className={`font-heading text-sm font-semibold mb-2 ${
+                <h3 className={`font-semibold mb-2 ${
                   'text-text-primary'
                 }`}>
                   Discovery
                 </h3>
-                <p className={`text-xs ${
+                <p className={`${
                   'text-muted'
                 }`}>
                   Understanding your requirements and goals
@@ -187,12 +187,12 @@ export default function WebApps() {
                 }`}>
                   <span className="font-bold">2</span>
                 </div>
-                <h3 className={`font-heading text-sm font-semibold mb-2 ${
+                <h3 className={`font-semibold mb-2 ${
                   'text-text-primary'
                 }`}>
                   Design
                 </h3>
-                <p className={`text-xs ${
+                <p className={`${
                   'text-muted'
                 }`}>
                   Creating wireframes and UI/UX designs
@@ -204,12 +204,12 @@ export default function WebApps() {
                 }`}>
                   <span className="font-bold">3</span>
                 </div>
-                <h3 className={`font-heading text-sm font-semibold mb-2 ${
+                <h3 className={`font-semibold mb-2 ${
                   'text-text-primary'
                 }`}>
                   Development
                 </h3>
-                <p className={`text-xs ${
+                <p className={`${
                   'text-muted'
                 }`}>
                   Building your application with agile methodology
@@ -221,12 +221,12 @@ export default function WebApps() {
                 }`}>
                   <span className="font-bold">4</span>
                 </div>
-                <h3 className={`font-heading text-sm font-semibold mb-2 ${
+                <h3 className={`font-semibold mb-2 ${
                   'text-text-primary'
                 }`}>
                   Launch
                 </h3>
-                <p className={`text-xs ${
+                <p className={`${
                   'text-muted'
                 }`}>
                   Deployment and ongoing support

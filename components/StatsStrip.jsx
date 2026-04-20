@@ -53,10 +53,10 @@ const StatsStrip = () => {
               variants={itemVariants}
               className="text-center"
             >
-              <div className="font-extrabold font-inter text-[48px] mb-2">
+              <div className="font-extrabold font-inter mb-2">
                 {stat.value}
               </div>
-              <div className="text-[14px]">
+              <div className="">
                 {stat.label}
               </div>
             </motion.div>

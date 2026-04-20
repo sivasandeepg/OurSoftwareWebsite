@@ -36,13 +36,13 @@ export default function Error({ error, reset }) {
                 </svg>
               </div>
               
-              <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-text-primary">
+              <h2 className="font-semibold mb-4 text-text-primary">
                 Something went wrong
               </h2>
-              <p className="text-base md:text-lg leading-relaxed mb-6 text-text-muted">
+              <p className="leading-relaxed mb-6 text-text-muted">
                 We apologize for the inconvenience. An unexpected error occurred.
               </p>
-              <p className="text-sm md:text-base leading-relaxed mb-8 text-text-muted">
+              <p className="leading-relaxed mb-8 text-text-muted">
                 Please try again or contact our support team if the problem persists.
               </p>
             </motion.div>

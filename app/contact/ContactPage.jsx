@@ -89,10 +89,10 @@ export default function Contact() {
               'hover:-translate-y-1'
             }`}
           >
-            <h1 className={`font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6`}>
+            <h1 className={`font-bold mb-6`}>
               Contact Us
             </h1>
-            <p className={`text-lg md:text-xl leading-relaxed`}>
+            <p className={`leading-relaxed`}>
               Get in touch with {siteConfig.name}. We're here to help and answer any questions you may have.
             </p>
           </motion.div>
@@ -115,7 +115,7 @@ export default function Contact() {
               <motion.div variants={itemVariants} className={`rounded-xl p-6 card ${
                 'hover:-translate-y-1'
               }`}>
-                <h3 className={`font-heading text-2xl font-semibold mb-4`}>
+                <h3 className={`font-semibold mb-4`}>
                   Get in Touch
                 </h3>
                 <p className={`mb-6`}>
@@ -131,7 +131,7 @@ export default function Contact() {
                       </svg>
                     </div>
                     <div>
-                      <p className={`text-sm text-text-primary`}>Email</p>
+                      <p className={`text-text-primary`}>Email</p>
                       <p className={`text-slate-200`}>aventurinetechsolutions@gmail.com</p> 
                     </div>
                   </div>
@@ -143,7 +143,7 @@ export default function Contact() {
                       </svg>
                     </div>
                     <div>
-                      <p className={`text-sm text-text-primary`}>Phone</p>
+                      <p className={`text-text-primary`}>Phone</p>
                       <p className={`text-slate-200`}>+91 8328227728</p>
                     </div>
                   </div>
@@ -156,7 +156,7 @@ export default function Contact() {
                       </svg>
                     </div>
                     <div>
-                      <p className={`text-sm text-text-primary`}>Address</p>
+                      <p className={`text-text-primary`}>Address</p>
                       <p className={`text-slate-200`}>Kavali, Nellore, Andhra Pradesh</p>    
                     </div>
                   </div>
@@ -166,7 +166,7 @@ export default function Contact() {
               <motion.div variants={itemVariants} className={`rounded-xl p-6 card ${
                 'hover:-translate-y-1'
               }`}>
-                <h3 className={`font-heading text-xl font-semibold mb-4`}>
+                <h3 className={`font-semibold mb-4`}>
                   Office Hours
                 </h3>
                 <div className={`space-y-2 text-slate-600`}>
@@ -188,7 +188,7 @@ export default function Contact() {
               <motion.div variants={itemVariants} className={`rounded-xl p-6 card ${
                 'hover:-translate-y-1'
               }`}>
-                <h3 className={`font-heading text-xl font-semibold mb-4`}>
+                <h3 className={`font-semibold mb-4`}>
                   Follow Us
                 </h3>
                 <div className="flex space-x-4">
@@ -242,7 +242,7 @@ export default function Contact() {
               <motion.div variants={itemVariants} className={`rounded-xl p-6 md:p-8 card ${
                 'hover:-translate-y-1'
               }`}>
-                <h3 className={`font-heading text-2xl font-semibold mb-6`}>
+                <h3 className={`font-semibold mb-6`}>
                   Send us a Message
                 </h3>
                 
@@ -255,7 +255,7 @@ export default function Contact() {
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label htmlFor="name" className={`block text-sm font-medium mb-2 ${
+                      <label htmlFor="name" className={`block font-medium mb-2 ${
                         'text-muted'
                       }`}>
                         Name *
@@ -275,7 +275,7 @@ export default function Contact() {
                     </div>
                     
                     <div>
-                      <label htmlFor="email" className={`block text-sm font-medium mb-2 ${
+                      <label htmlFor="email" className={`block font-medium mb-2 ${
                         'text-muted'
                       }`}>
                         Email *
@@ -296,7 +296,7 @@ export default function Contact() {
                   </div>
                   
                   <div>
-                    <label htmlFor="phone" className={`block text-sm font-medium mb-2 ${
+                    <label htmlFor="phone" className={`block font-medium mb-2 ${
                         'text-muted'
                       }`}>
                       Phone
@@ -315,7 +315,7 @@ export default function Contact() {
                   </div>
                   
                   <div>
-                    <label htmlFor="subject" className={`block text-sm font-medium mb-2 ${
+                    <label htmlFor="subject" className={`block font-medium mb-2 ${
                         'text-muted'
                       }`}>
                       Subject *
@@ -335,7 +335,7 @@ export default function Contact() {
                   </div>
                   
                   <div>
-                    <label htmlFor="message" className={`block text-sm font-medium mb-2 ${
+                    <label htmlFor="message" className={`block font-medium mb-2 ${
                         'text-muted'
                       }`}>
                       Message *
@@ -364,7 +364,7 @@ export default function Contact() {
                   </Button>
                 </form>
                 
-                <p className={`text-sm mt-4 ${'text-muted'}`}>
+                <p className={`mt-4 ${'text-muted'}`}>
                   * Required fields. This form will open your email client with the details pre-filled.
                 </p>
               </motion.div>

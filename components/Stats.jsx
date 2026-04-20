@@ -111,17 +111,17 @@ const Stats = () => {
                 variants={itemVariants}
                 className="text-center"
               >
-                <div className={`text-3xl md:text-4xl lg:text-5xl font-bold mb-2 ${
+                <div className={`font-bold mb-2 ${
                   mounted && isDark ? 'text-white' : 'text-gray-900'
                 }`}>
                   {Math.round(stat.current)}
                   {stat.suffix && (
-                    <span className="text-xl md:text-2xl lg:text-3xl ml-1">
+                    <span className="ml-1">
                       {stat.suffix}
                     </span>
                   )}
                 </div>
-                <div className={`text-sm md:text-base uppercase tracking-wide ${
+                <div className={`uppercase tracking-wide ${
                   mounted && isDark ? 'text-white/70' : 'text-gray-600'
                 }`}>
                   {stat.label}

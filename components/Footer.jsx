@@ -86,14 +86,14 @@ const Footer = () => {
 
           {/* Column 2: Company */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold font-inter text-text-primary">
+            <h4 className="font-semibold font-inter text-text-primary">
               Company
             </h4>
             <ul className="space-y-3">
               <li>
                 <a
                   href="/about"
-                  className="text-sm text-text-muted hover:text-text-primary transition-colors duration-300"
+                  className="text-text-muted hover:text-text-primary transition-colors duration-300"
                 >
                   About
                 </a>
@@ -101,7 +101,7 @@ const Footer = () => {
               <li>
                 <a
                   href="/careers"
-                  className="text-sm text-text-muted hover:text-text-primary transition-colors duration-300"
+                  className="text-text-muted hover:text-text-primary transition-colors duration-300"
                 >
                   Careers
                 </a>
@@ -109,7 +109,7 @@ const Footer = () => {
               <li>
                 <a
                   href="/blog"
-                  className="text-sm text-text-muted hover:text-text-primary transition-colors duration-300"
+                  className="text-text-muted hover:text-text-primary transition-colors duration-300"
                 >
                   Blog
                 </a>
@@ -124,27 +124,27 @@ const Footer = () => {
             </h4>
             <ul className="space-y-3">
               <li>
-                <a href="/services/ai-solutions" className="text-sm text-text-muted hover:text-text-primary transition-colors duration-300">
+                <a href="/services/ai-solutions" className="text-text-muted hover:text-text-primary transition-colors duration-300">
                   AI Solutions
                 </a>
               </li>
               <li>
-                <a href="/services/web-apps" className="text-sm text-text-muted hover:text-text-primary transition-colors duration-300">
+                <a href="/services/web-apps" className="text-text-muted hover:text-text-primary transition-colors duration-300">
                   Web Apps
                 </a>
               </li>
               <li>
-                <a href="/services/cloud" className="text-sm text-text-muted hover:text-text-primary transition-colors duration-300">
+                <a href="/services/cloud" className="text-text-muted hover:text-text-primary transition-colors duration-300">
                   Cloud
                 </a>
               </li>
               <li>
-                <a href="/services/consulting" className="text-sm text-text-muted hover:text-text-primary transition-colors duration-300">
+                <a href="/services/consulting" className="text-text-muted hover:text-text-primary transition-colors duration-300">
                   Consulting
                 </a>
               </li>
               <li>
-                <a href="/services" className="text-sm text-text-muted hover:text-text-primary transition-colors duration-300">
+                <a href="/services" className="text-text-muted hover:text-text-primary transition-colors duration-300">
                   Digital Marketing
                 </a>
               </li>
@@ -157,10 +157,10 @@ const Footer = () => {
               Contact
             </h4>
             <div className="space-y-3">
-              <a href="mailto:aventurinetechsolutions@gmail.com" className="text-sm font-normal hover:opacity-80 transition-opacity">
+              <a href="mailto:aventurinetechsolutions@gmail.com" className="font-normal hover:opacity-80 transition-opacity">
                aventurinetechsolutions@gmail.com
               </a> 
-              <a href="/contact" className="inline-block btn-outline text-sm">
+              <a href="/contact" className="inline-block btn-outline">
                 Book a Call
               </a>
             </div>
@@ -169,7 +169,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-border mt-8 pt-8">
-          <p className="text-center text-[13px] text-text-muted">
+          <p className="text-center text-text-muted">
             © {currentYear} {siteConfig.name}. All rights reserved.
           </p>
         </div>

@@ -6,6 +6,7 @@ import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import Button from '../../components/Button'
 import { siteConfig } from '../../config/siteConfig'
+import { cardStyles, cardTitleStyles } from '../../lib/styles'
 
 export default function About() {
   const [mounted, setMounted] = useState(false)
@@ -77,12 +78,12 @@ export default function About() {
               'hover:-translate-y-1'
             }`}
           >
-            <h1 className={`font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6 ${
+            <h1 className={`font-bold mb-6 ${
               'text-text-primary'
             }`}>
               About {siteConfig.name}
             </h1>
-            <p className={`text-lg md:text-xl leading-relaxed ${
+            <p className={`leading-relaxed ${
               'text-muted'
             }`}>
               {siteConfig.tagline}
@@ -102,7 +103,7 @@ export default function About() {
             className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
           >
             <motion.div variants={itemVariants}>
-              <h2 className={`font-heading text-3xl md:text-4xl font-bold mb-6 ${
+              <h2 className={`font-bold mb-6 ${
                 'text-text-primary'
               }`}>
                 Our Story
@@ -129,7 +130,7 @@ export default function About() {
               }`}
             >
               <div className="text-center">
-                <h3 className={`font-heading text-2xl font-bold mb-2 ${
+                <h3 className={`font-semibold mb-2 ${
                   'text-text-primary'
                 }`}>Our Mission</h3>
                 <p className={`${
@@ -140,7 +141,7 @@ export default function About() {
               </div>
               
               <div className="text-center">
-                <h3 className={`font-heading text-2xl font-bold mb-2 ${
+                <h3 className={`font-semibold mb-2 ${
                   'text-text-primary'
                 }`}>Our Vision</h3>
                 <p className={`${
@@ -151,7 +152,7 @@ export default function About() {
               </div>
               
               <div className="text-center">
-                <h3 className={`font-heading text-2xl font-bold mb-2 ${
+                <h3 className={`font-semibold mb-2 ${
                   'text-text-primary'
                 }`}>Our Values</h3>
                 <p className={`${
@@ -175,12 +176,12 @@ export default function About() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className={`font-heading text-3xl md:text-4xl lg:text-5xl font-bold mb-4 ${
+            <h2 className={`font-bold mb-4 ${
               'text-text-primary'
             }`}>
               Meet Our Leadership Team
             </h2>
-            <p className={`text-lg max-w-2xl mx-auto ${
+            <p className={`max-w-2xl mx-auto ${
               'text-muted'
             }`}>
               Experienced technology leaders and innovators dedicated to your success
@@ -202,9 +203,7 @@ export default function About() {
                   y: -5,
                   transition: { duration: 0.3 }
                 }}
-                className={`rounded-xl p-6 text-center card group ${
-                  'transition-all duration-300 hover:-translate-y-1'
-                }`}
+                className={`rounded-xl p-6 text-center ${cardStyles}`}
               >
                 {/* Placeholder Image */}
                 <div className={`w-24 h-24 rounded-full mx-auto mb-4 flex items-center justify-center ${
@@ -215,7 +214,7 @@ export default function About() {
                   </svg>
                 </div>
                 
-                <h3 className={`font-heading text-xl font-semibold mb-2 group-hover:text-primary transition-colors duration-300 ${
+                <h3 className={`${cardTitleStyles} ${
                   'text-text-primary'
                 }`}>
                   {member.name}
@@ -225,7 +224,7 @@ export default function About() {
                 }`}>
                   {member.role}
                 </p>
-                <p className={`text-sm leading-relaxed ${
+                <p className={`leading-relaxed ${
                   'text-muted'
                 }`}>
                   {member.bio}
@@ -248,12 +247,12 @@ export default function About() {
               'hover:-translate-y-1'
               }`}
           >
-            <h2 className={`font-heading text-3xl md:text-4xl font-bold mb-4 ${
+            <h2 className={`font-bold mb-4 ${
               'text-text-primary'
             }`}>
               Partner With Us
             </h2>
-            <p className={`text-lg mb-8 ${
+            <p className={`mb-8 ${
               'text-muted'
             }`}>
               Discover why {siteConfig.name} is the perfect technology partner for your digital transformation journey.

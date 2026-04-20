@@ -167,12 +167,12 @@ const TechStack = () => {
             — Our Tech Stack —
           </motion.p>
           
-          <h2 className={`font-heading text-3xl md:text-4xl lg:text-5xl font-bold mb-4 ${
+          <h2 className={`font-bold mb-4 ${
             isDark ? 'text-white' : 'text-white'
           }`}>
             Technologies We Master
           </h2>
-          <p className={`text-lg max-w-2xl mx-auto ${
+          <p className={`max-w-2xl mx-auto ${
             isDark ? 'text-white/80' : 'text-white/90'
           }`}>
             Cutting-edge technologies and frameworks we use to build exceptional digital solutions
@@ -209,7 +209,7 @@ const TechStack = () => {
                 </div>
 
                 {/* Tech Name */}
-                <h3 className={`text-sm font-medium text-center ${
+                <h3 className={`font-medium text-center ${
                   isDark ? 'text-white/90' : 'text-white/90'
                 }`}>
                   {tech.name}

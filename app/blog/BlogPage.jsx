@@ -6,6 +6,7 @@ import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import Button from '../../components/Button'
 import { siteConfig } from '../../config/siteConfig'
+import { cardStyles, cardTitleStyles } from '../../lib/styles'
 
 export default function Blog() {
   const [mounted, setMounted] = useState(false)
@@ -87,12 +88,12 @@ export default function Blog() {
               'hover:-translate-y-1'
             }`}
           >
-            <h1 className={`font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6 ${
+            <h1 className={`font-bold mb-6 ${
               'text-text-primary'
             }`}>
               Our Blog
             </h1>
-            <p className={`text-lg md:text-xl leading-relaxed ${
+            <p className={`leading-relaxed ${
               'text-muted'
             }`}>
               Insights, tutorials, and industry news from our team of experts.
@@ -109,7 +110,7 @@ export default function Blog() {
               <button
                 key={index}
                 onClick={() => setSelectedCategory(category)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                className={`px-4 py-2 rounded-full font-medium transition-colors ${
                   selectedCategory === category
                     ? 'bg-secondary text-white'
                     : 'bg-secondary/20 text-secondary hover:bg-secondary/30'
@@ -133,9 +134,7 @@ export default function Blog() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`rounded-xl overflow-hidden h-full flex flex-col card group ${
-                  'transition-all duration-300 hover:-translate-y-1'
-                }`}
+                className={`rounded-xl overflow-hidden h-full flex flex-col ${cardStyles}`}
               >
                 {/* Placeholder Image */}
                 <div className={`h-48 bg-gradient-to-br from-secondary/20 to-secondary/10 flex items-center justify-center`}>
@@ -147,12 +146,12 @@ export default function Blog() {
                 <div className="p-6 flex-grow flex flex-col">
                   {/* Category and Date */}
                   <div className="flex items-center justify-between mb-3">
-                    <span className={`text-xs font-medium px-2 py-1 rounded-full ${
+                    <span className={`font-medium px-2 py-1 rounded-full ${
                       'bg-secondary/20 text-secondary'
                     }`}>
                       {post.category}
                     </span>
-                    <span className={`text-xs ${
+                    <span className={`${
                       'text-muted'
                     }`}>
                       {post.date}
@@ -160,7 +159,7 @@ export default function Blog() {
                   </div>
 
                   {/* Title */}
-                  <h3 className={`font-heading text-xl font-semibold mb-3 group-hover:text-primary transition-colors duration-300 ${
+                  <h3 className={`${cardTitleStyles} ${
                     'text-text-primary'
                   }`}>
                     {post.title}
@@ -175,7 +174,7 @@ export default function Blog() {
 
                   {/* Read Time and Link */}
                   <div className="flex items-center justify-between">
-                    <span className={`text-xs ${
+                    <span className={`${
                       'text-muted'
                     }`}>
                       {post.readTime}
@@ -203,12 +202,12 @@ export default function Blog() {
               'hover:-translate-y-1'
             }`}
           >
-            <h2 className={`font-heading text-3xl md:text-4xl font-bold mb-6 text-center ${
+            <h2 className={`font-bold mb-6 text-center ${
               'text-text-primary'
             }`}>
               Stay Updated
             </h2>
-            <p className={`text-lg mb-8 text-center ${
+            <p className={`mb-8 text-center ${
               'text-muted'
             }`}>
               Subscribe to our newsletter for the latest insights and updates from our team.

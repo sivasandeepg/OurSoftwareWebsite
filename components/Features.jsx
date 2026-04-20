@@ -98,10 +98,10 @@ const Features = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-text-primary">
+          <h2 className="font-bold tracking-tight text-text-primary">
             What We Build
           </h2>
-          <p className="text-base md:text-lg text-text-muted">
+          <p className="text-text-muted">
             End-to-end software solutions for modern businesses
           </p>
         </motion.div>
@@ -130,10 +130,10 @@ const Features = () => {
               </div>
 
               {/* Content */}
-              <h3 className="font-semibold font-inter text-[18px] mb-3 group-hover:text-primary transition-colors duration-300">
+              <h3 className="font-semibold font-inter mb-3 group-hover:text-primary transition-colors duration-300">
                 {service.title}
               </h3>
-              <p className="text-[14px] leading-relaxed text-text-muted">
+              <p className="leading-relaxed text-text-muted">
                 {service.description}
               </p>
             </motion.div>

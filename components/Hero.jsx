@@ -20,8 +20,8 @@ const Hero = () => {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { 
-        duration: 0.6, 
+      transition: {
+        duration: 0.6,
         ease: [0.25, 0.46, 0.45, 0.94],
         willChange: 'transform, opacity'
       }
@@ -34,9 +34,9 @@ const Hero = () => {
       opacity: 1,
       y: 0,
       scale: 1,
-      transition: { 
-        duration: 1.0, 
-        delay: 0.6, 
+      transition: {
+        duration: 1.0,
+        delay: 0.6,
         ease: [0.25, 0.46, 0.45, 0.94],
         willChange: 'transform, opacity'
       },
@@ -47,11 +47,20 @@ const Hero = () => {
     }
   }
 
+  const stats = [
+    { value: '50+', label: 'Projects Delivered' },
+    { value: '12+', label: 'Technologies' },
+    { value: '99%', label: 'Client Satisfaction' },
+  ]
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background grid-background noise-texture py-24 md:py-36">
-      {/* Radial gradient glow */}
+      {/* White gradient glow band in center */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[250px] bg-white/[0.03] rounded-full blur-[100px]" />
+
+      {/* Background orb */}
       <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-primary/15 rounded-full blur-3xl"></div>
-      
+
       {/* Hero content */}
       <motion.div
         variants={containerVariants}
@@ -70,11 +79,11 @@ const Hero = () => {
             >
               AI-Powered · Enterprise Ready
             </motion.div>
-            
+
             {/* Main headline */}
             <motion.h1
               variants={itemVariants}
-              transition={{ 
+              transition={{
                 delay: 0.25,
                 duration: 0.5,
                 ease: [0.25, 0.46, 0.45, 0.94],
@@ -84,7 +93,10 @@ const Hero = () => {
             >
               We Build Software
               <br />
-              That Thinks Ahead
+              That{' '}
+              <span className="bg-gradient-to-r from-primary via-blue-400 to-secondary bg-clip-text text-transparent">
+                Thinks Ahead
+              </span>
             </motion.h1>
 
             {/* Subheadline */}
@@ -122,17 +134,22 @@ const Hero = () => {
               </motion.a>
             </motion.div>
 
-            {/* Trust line */}
-            <motion.p
+            {/* Mini stats strip */}
+            <motion.div
               variants={itemVariants}
-              className="text-[13px] text-gray-300"
-              aria-label="Aventurine: Where Fortune Meets Code"
+              transition={{ delay: 0.7 }}
+              className="flex flex-wrap items-center gap-8 pt-4 border-t border-border/50"
             >
-              Aventurine: Where Fortune Meets Code
-            </motion.p>
+              {stats.map((stat, i) => (
+                <div key={i} className="flex flex-col">
+                  <span className="text-2xl font-bold text-text-primary">{stat.value}</span>
+                  <span className="text-xs text-text-muted tracking-wide">{stat.label}</span>
+                </div>
+              ))}
+            </motion.div>
           </div>
 
-          {/* Right Column - Abstract Visual */}
+          {/* Right Column - Code Card */}
           <motion.div
             variants={cardVariants}
             initial="hidden"
@@ -144,10 +161,10 @@ const Hero = () => {
             <div className="relative bg-surface border border-border rounded-xl p-6 glow-primary shadow-2xl overflow-hidden">
               {/* Gradient border effect */}
               <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-primary to-secondary opacity-20 blur-sm"></div>
-              
+
               {/* Card content */}
               <div className="relative bg-surface rounded-lg p-3 sm:p-4 border border-border overflow-x-auto">
-                {/* Fake code snippet */}
+                {/* Code snippet */}
                 <div className="space-y-3 font-mono text-xs sm:text-sm min-w-max">
                   <div className="flex items-center space-x-2">
                     <div className="w-3 h-3 bg-red-500 rounded-full"></div>
@@ -159,10 +176,10 @@ const Hero = () => {
                     <span className="text-purple-400">const</span> agent = <span className="text-blue-400">createAI</span>(&#123;
                   </div>
                   <div className="ml-4 text-gray-300 whitespace-nowrap">
-                    <span className="text-purple-400">model</span>: <span className="text-green-400">'gpt-4'</span>,
+                    <span className="text-purple-400">model</span>: <span className="text-green-400">&apos;gpt-4&apos;</span>,
                   </div>
                   <div className="ml-4 text-gray-300 whitespace-nowrap">
-                    capabilities: [<span className="text-green-400">'analysis'</span>, <span className="text-green-400">'automation'</span>]
+                    capabilities: [<span className="text-green-400">&apos;analysis&apos;</span>, <span className="text-green-400">&apos;automation&apos;</span>]
                   </div>
                   <div className="text-gray-300 whitespace-nowrap">&#125;);</div>
                 </div>

@@ -56,12 +56,12 @@ export default function AISolutions() {
               'glass'
             }`}
           >
-            <h1 className={`font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6 ${
+            <h1 className={`font-bold mb-6 ${
               'text-text-primary'
             }`}>
               AI Solutions & Machine Learning
             </h1>
-            <p className={`text-lg md:text-xl leading-relaxed ${
+            <p className={`leading-relaxed ${
               'text-muted'
             }`}>
               Harness the power of artificial intelligence to transform your business operations and gain competitive advantage.
@@ -85,7 +85,7 @@ export default function AISolutions() {
                   'glass hover-glow'
                 }`}
               >
-                <h3 className={`font-heading text-xl font-semibold mb-3 ${
+                <h3 className={`font-semibold mb-3 ${
                   'text-text-primary'
                 }`}>
                   {service.title}
@@ -97,7 +97,7 @@ export default function AISolutions() {
                 </p>
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className={`flex items-center text-sm ${
+                    <li key={featureIndex} className={`flex items-center ${
                       'text-muted'
                     }`}>
                       <svg className="w-4 h-4 text-secondary mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -125,7 +125,7 @@ export default function AISolutions() {
               'glass'
             }`}
           >
-            <h2 className={`font-heading text-3xl md:text-4xl font-bold mb-6 text-center ${
+            <h2 className={`font-bold mb-6 text-center ${
               'text-text-primary'
             }`}>
               AI Technologies We Use
@@ -134,7 +134,7 @@ export default function AISolutions() {
               {technologies.map((tech, index) => (
                 <span
                   key={index}
-                  className={`px-4 py-2 rounded-full text-sm font-medium ${
+                  className={`px-4 py-2 rounded-full font-medium ${
                     'bg-secondary/20 text-secondary'
                   }`}
                 >
@@ -158,55 +158,55 @@ export default function AISolutions() {
               'glass'
             }`}
           >
-            <h2 className={`font-heading text-3xl md:text-4xl font-bold mb-6 text-center ${
+            <h2 className={`font-bold mb-6 text-center ${
               'text-text-primary'
             }`}>
               Real-World AI Applications
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <h3 className={`font-heading text-lg font-semibold mb-2 ${
+                <h3 className={`font-semibold mb-2 ${
                   'text-text-primary'
                 }`}>
                   Healthcare
                 </h3>
-                <p className={`text-sm mb-4 ${
+                <p className={`mb-4 ${
                   'text-muted'
                 }`}>
                   Medical imaging analysis, disease prediction, and personalized treatment recommendations.
                 </p>
               </div>
               <div>
-                <h3 className={`font-heading text-lg font-semibold mb-2 ${
+                <h3 className={`font-semibold mb-2 ${
                   'text-text-primary'
                 }`}>
                   Finance
                 </h3>
-                <p className={`text-sm mb-4 ${
+                <p className={`mb-4 ${
                   'text-muted'
                 }`}>
                   Fraud detection, risk assessment, algorithmic trading, and customer service automation.
                 </p>
               </div>
               <div>
-                <h3 className={`font-heading text-lg font-semibold mb-2 ${
+                <h3 className={`font-semibold mb-2 ${
                   'text-text-primary'
                 }`}>
                   Retail
                 </h3>
-                <p className={`text-sm mb-4 ${
+                <p className={`mb-4 ${
                   'text-muted'
                 }`}>
                   Recommendation engines, demand forecasting, inventory optimization, and customer insights.
                 </p>
               </div>
               <div>
-                <h3 className={`font-heading text-lg font-semibold mb-2 ${
+                <h3 className={`font-semibold mb-2 ${
                   'text-text-primary'
                 }`}>
                   Manufacturing
                 </h3>
-                <p className={`text-sm mb-4 ${
+                <p className={`mb-4 ${
                   'text-muted'
                 }`}>
                   Predictive maintenance, quality control, supply chain optimization, and process automation.

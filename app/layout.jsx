@@ -1,4 +1,4 @@
-import { Inter, Playfair_Display } from 'next/font/google'
+import { Inter, Playfair_Display, Plus_Jakarta_Sans } from 'next/font/google'
 import Script from 'next/script'
 import './globals.css'
 import { siteConfig } from '../config/siteConfig'
@@ -13,6 +13,12 @@ const playfair = Playfair_Display({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-playfair',
+})
+
+const plusJakartaSans = Plus_Jakarta_Sans({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800'],
+  variable: '--font-jakarta',
 })
 
 export const viewport = {
@@ -138,7 +144,7 @@ export default function RootLayout({ children }) {
           })}
         </Script>
       </head>
-      <body className={`${inter.variable} ${playfair.variable} font-body antialiased`}>
+      <body className={`${inter.variable} ${playfair.variable} ${plusJakartaSans.variable} font-sans antialiased`}>
         {children}
       </body>
     </html>

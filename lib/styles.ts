@@ -1,9 +1,7 @@
-export const cardBaseStyles = `
-  bg-surface border border-border rounded-xl p-8 transition-all duration-300 
-  hover:border-primary hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-1
-  cursor-pointer
-`;
+export const cardStyles = "card group rounded-2xl p-6 md:p-8 transition-all duration-300 hover:-translate-y-1";
 
-export const buttonActiveStyles = `
-  active:scale-95 focus:ring-2 focus:ring-offset-2 focus:ring-primary/50
-`;
+export const cardTitleStyles = "font-semibold font-inter text-[18px] mb-3 group-hover:text-primary transition-colors duration-300";
+
+export const sectionHeadingStyles = "text-3xl md:text-4xl font-bold leading-tight tracking-tight";
+
+export const sectionLabelStyles = "text-xs font-semibold uppercase tracking-[0.15em]";

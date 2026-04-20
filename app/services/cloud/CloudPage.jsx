@@ -52,12 +52,12 @@ export default function Cloud() {
               'glass'
             }`}
           >
-            <h1 className={`font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6 ${
+            <h1 className={`font-bold mb-6 ${
               'text-text-primary'
             }`}>
               Cloud Solutions
             </h1>
-            <p className={`text-lg md:text-xl leading-relaxed ${
+            <p className={`leading-relaxed ${
               'text-muted'
             }`}>
               Harness the power of cloud computing with our comprehensive cloud services and solutions.
@@ -81,7 +81,7 @@ export default function Cloud() {
                   'glass hover-glow'
                 }`}
               >
-                <h3 className={`font-heading text-xl font-semibold mb-3 ${
+                <h3 className={`font-semibold mb-3 ${
                   'text-text-primary'
                 }`}>
                   {service.title}
@@ -93,7 +93,7 @@ export default function Cloud() {
                 </p>
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className={`flex items-center text-sm ${
+                    <li key={featureIndex} className={`flex items-center ${
                       'text-muted'
                     }`}>
                       <svg className="w-4 h-4 text-secondary mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -121,55 +121,55 @@ export default function Cloud() {
               'glass'
             }`}
           >
-            <h2 className={`font-heading text-3xl md:text-4xl font-bold mb-6 text-center ${
+            <h2 className={`font-bold mb-6 text-center ${
               'text-text-primary'
             }`}>
               Why Choose Our Cloud Services?
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <h3 className={`font-heading text-lg font-semibold mb-2 ${
+                <h3 className={`font-semibold mb-2 ${
                   'text-text-primary'
                 }`}>
                   Cost Efficiency
                 </h3>
-                <p className={`text-sm ${
+                <p className={`${
                   'text-muted'
                 }`}>
                   Reduce infrastructure costs by 40-60% with optimized cloud solutions.
                 </p>
               </div>
               <div>
-                <h3 className={`font-heading text-lg font-semibold mb-2 ${
+                <h3 className={`font-semibold mb-2 ${
                   'text-text-primary'
                 }`}>
                   Scalability
                 </h3>
-                <p className={`text-sm ${
+                <p className={`${
                   'text-muted'
                 }`}>
                   Scale your resources up or down based on demand with auto-scaling.
                 </p>
               </div>
               <div>
-                <h3 className={`font-heading text-lg font-semibold mb-2 ${
+                <h3 className={`font-semibold mb-2 ${
                   'text-text-primary'
                 }`}>
                   Security
                 </h3>
-                <p className={`text-sm ${
+                <p className={`${
                   'text-muted'
                 }`}>
                   Enterprise-grade security with compliance and data protection.
                 </p>
               </div>
               <div>
-                <h3 className={`font-heading text-lg font-semibold mb-2 ${
+                <h3 className={`font-semibold mb-2 ${
                   'text-text-primary'
                 }`}>
                   24/7 Support
                 </h3>
-                <p className={`text-sm ${
+                <p className={`${
                   'text-muted'
                 }`}>
                   Round-the-clock monitoring and support for your cloud infrastructure.

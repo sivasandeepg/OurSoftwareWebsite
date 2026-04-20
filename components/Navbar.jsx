@@ -74,11 +74,11 @@ const Navbar = () => {
             >
               {/* Geometric icon */}
               <div className="relative">
-                <div className="w-8 h-0.5 bg-primary"></div>
-                <div className="w-8 h-0.5 bg-primary mt-2"></div>
-                <div className="absolute top-1 right-0 w-2 h-2 bg-primary"></div>
+                <div className="w-9 h-0.5 bg-primary"></div>
+                <div className="w-9 h-0.5 bg-primary mt-2.5"></div>
+                <div className="absolute top-1 right-0 w-2.5 h-2.5 bg-primary"></div>
               </div>
-              <span className="text-xl font-semibold text-text-primary tracking-tight">
+              <span className="text-lg font-bold text-text-primary tracking-normal">
                 {siteConfig.name}
               </span>
             </motion.a>
@@ -89,7 +89,7 @@ const Navbar = () => {
                 <motion.a
                   key={item.href}
                   href={item.href}
-                  className={`text-sm font-inter font-medium transition-all duration-300 ease-in-out tracking-wide ${
+                  className={`text-sm font-medium transition-all duration-300 ease-in-out tracking-wide ${
                     isActive(item.href) 
                       ? 'text-primary font-semibold' 
                       : 'text-text-muted hover:text-text-primary hover:text-primary'
@@ -164,7 +164,7 @@ const Navbar = () => {
                       <div className="w-8 h-0.5 bg-primary mt-2"></div>
                       <div className="absolute top-1 right-0 w-2 h-2 bg-primary"></div>
                     </div>
-                    <h2 className="text-xl font-semibold font-inter text-text-primary">
+                    <h2 className="font-semibold font-inter text-text-primary">
                       {siteConfig.name}
                     </h2>
                   </div>
@@ -186,7 +186,7 @@ const Navbar = () => {
                         key={item.href}
                         href={item.href}
                         onClick={() => setIsOpen(false)}
-                        className={`block px-4 py-3 rounded-lg text-lg font-medium transition-all duration-300 ease-in-out ${
+                        className={`block px-4 py-3 rounded-lg font-medium transition-all duration-300 ease-in-out ${
                           isActive(item.href) 
                             ? 'text-primary bg-primary/10 font-semibold' 
                             : 'text-text-muted hover:text-text-primary hover:bg-surface hover:text-primary'
@@ -204,7 +204,7 @@ const Navbar = () => {
                   <motion.a
                     href="/contact"
                     onClick={() => setIsOpen(false)}
-                    className="block w-full mt-8 rounded-md px-5 py-3 text-sm font-semibold text-center border border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 ease-in-out"
+                    className="block w-full mt-8 rounded-md px-5 py-3 font-semibold text-center border border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 ease-in-out"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.4 }}

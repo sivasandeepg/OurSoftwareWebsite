@@ -153,10 +153,10 @@ const Testimonials = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="font-bold font-inter text-3xl md:text-4xl lg:text-5xl text-text-primary mb-4">
+          <h2 className="font-bold font-inter text-text-primary mb-4">
             Client Testimonials
           </h2>
-          <p className="text-lg text-text-muted max-w-2xl mx-auto">
+          <p className="text-text-muted max-w-2xl mx-auto">
             Hear from our clients about their experiences working with us
           </p>
         </motion.div>
@@ -180,14 +180,14 @@ const Testimonials = () => {
               className="card rounded-xl p-6 flex-shrink-0 w-80"
             >
               <StarRating rating={testimonial.rating} />
-              <p className="text-sm text-text-muted mb-4 mt-4 italic leading-relaxed">
+              <p className="text-text-muted mb-4 mt-4 italic leading-relaxed">
                 "{testimonial.content}"
               </p>
               <div>
                 <h4 className="font-semibold font-inter text-text-primary">
                   {testimonial.name}
                 </h4>
-                <p className="text-sm text-text-muted">
+                <p className="text-text-muted">
                   {testimonial.role}
                 </p>
               </div>

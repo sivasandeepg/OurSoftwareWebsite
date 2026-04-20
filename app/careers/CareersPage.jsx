@@ -107,12 +107,12 @@ export default function Careers() {
               'glass'
             }`}
           >
-            <h1 className={`font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6 ${
+            <h1 className={`font-bold mb-6 ${
               'text-text-primary'
             }`}>
               Join Our Team
             </h1>
-            <p className={`text-lg md:text-xl leading-relaxed ${
+            <p className={`leading-relaxed ${
               'text-muted'
             }`}>
               Build amazing software with a talented team that values innovation, collaboration, and growth.
@@ -131,12 +131,12 @@ export default function Careers() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className={`font-heading text-3xl md:text-4xl font-bold mb-4 ${
+            <h2 className={`font-bold mb-4 ${
               'text-text-primary'
             }`}>
               Why Work at {siteConfig.name}?
             </h2>
-            <p className={`text-lg ${
+            <p className={`${
               'text-muted'
             }`}>
               We offer more than just a job – we offer a career with purpose and growth.
@@ -162,7 +162,7 @@ export default function Careers() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h3 className={`font-heading text-lg font-semibold mb-3 ${
+                <h3 className={`font-semibold mb-3 ${
                   'text-text-primary'
                 }`}>
                   {benefit.title}
@@ -188,12 +188,12 @@ export default function Careers() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className={`font-heading text-3xl md:text-4xl font-bold mb-4 ${
+            <h2 className={`font-bold mb-4 ${
               'text-text-primary'
             }`}>
               Open Positions
             </h2>
-            <p className={`text-lg ${
+            <p className={`${
               'text-muted'
             }`}>
               Find your next opportunity with us.
@@ -214,7 +214,7 @@ export default function Careers() {
               >
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
                   <div className="flex-grow">
-                    <h3 className={`font-heading text-xl font-semibold mb-2 ${
+                    <h3 className={`font-semibold mb-2 ${
                       'text-text-primary'
                     }`}>
                       {position.title}
@@ -225,22 +225,22 @@ export default function Careers() {
                       {position.description}
                     </p>
                     <div className="flex flex-wrap gap-3">
-                      <span className={`text-sm px-3 py-1 rounded-full ${
+                      <span className={`px-3 py-1 rounded-full ${
                         'bg-secondary/20 text-secondary'
                       }`}>
                         {position.department}
                       </span>
-                      <span className={`text-sm px-3 py-1 rounded-full ${
+                      <span className={`px-3 py-1 rounded-full ${
                         'bg-secondary/20 text-secondary'
                       }`}>
                         {position.location}
                       </span>
-                      <span className={`text-sm px-3 py-1 rounded-full ${
+                      <span className={`px-3 py-1 rounded-full ${
                         'bg-secondary/20 text-secondary'
                       }`}>
                         {position.type}
                       </span>
-                      <span className={`text-sm px-3 py-1 rounded-full ${
+                      <span className={`px-3 py-1 rounded-full ${
                         'bg-secondary/20 text-secondary'
                       }`}>
                         {position.experience}
@@ -271,14 +271,14 @@ export default function Careers() {
               'glass'
             }`}
           >
-            <h2 className={`font-heading text-3xl md:text-4xl font-bold mb-6 text-center ${
+            <h2 className={`font-bold mb-6 text-center ${
               'text-text-primary'
             }`}>
               Our Culture
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
-                <h3 className={`font-heading text-xl font-semibold mb-3 ${
+                <h3 className={`font-semibold mb-3 ${
                   'text-text-primary'
                 }`}>
                   Innovation First
@@ -290,7 +290,7 @@ export default function Careers() {
                 </p>
               </div>
               <div>
-                <h3 className={`font-heading text-xl font-semibold mb-3 ${
+                <h3 className={`font-semibold mb-3 ${
                   'text-text-primary'
                 }`}>
                   Collaborative Environment
@@ -302,7 +302,7 @@ export default function Careers() {
                 </p>
               </div>
               <div>
-                <h3 className={`font-heading text-xl font-semibold mb-3 ${
+                <h3 className={`font-semibold mb-3 ${
                   'text-text-primary'
                 }`}>
                   Continuous Learning
@@ -314,7 +314,7 @@ export default function Careers() {
                 </p>
               </div>
               <div>
-                <h3 className={`font-heading text-xl font-semibold mb-3 ${
+                <h3 className={`font-semibold mb-3 ${
                   'text-text-primary'
                 }`}>
                   Work-Life Harmony
