@@ -68,17 +68,16 @@ const Navbar = () => {
             {/* Logo */}
             <motion.a
               href="/"
-              className="flex items-center space-x-3 flex-shrink-0"
+              className="flex items-center gap-0 flex-shrink-0"
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.2 }}
             >
-              {/* Geometric icon */}
-              <div className="relative">
-                <div className="w-9 h-0.5 bg-primary"></div>
-                <div className="w-9 h-0.5 bg-primary mt-2.5"></div>
-                <div className="absolute top-1 right-0 w-2.5 h-2.5 bg-primary"></div>
-              </div>
-              <span className="text-lg font-bold text-text-primary tracking-normal">
+              <img
+                src="/images/aventurine_tech_solutions_logo.png"
+                alt="Aventurine Tech Solutions - Software Company Kavali"
+                className="w-16 h-16 rounded-lg object-contain"
+              />
+              <span className="-ml-3 text-lg font-bold text-text-primary tracking-normal">
                 {siteConfig.name}
               </span>
             </motion.a>
@@ -158,13 +157,13 @@ const Navbar = () => {
               <div className="flex flex-col h-full">
                 {/* Header */}
                 <div className="flex items-center justify-between p-6 border-b border-border">
-                  <div className="flex items-center space-x-3">
-                    <div className="relative">
-                      <div className="w-8 h-0.5 bg-primary"></div>
-                      <div className="w-8 h-0.5 bg-primary mt-2"></div>
-                      <div className="absolute top-1 right-0 w-2 h-2 bg-primary"></div>
-                    </div>
-                    <h2 className="font-semibold font-inter text-text-primary">
+                  <div className="flex items-center gap-0">
+                    <img
+                      src="/images/aventurine_tech_solutions_logo.png"
+                      alt="Aventurine Tech Solutions"
+                      className="w-14 h-14 rounded-lg object-contain"
+                    />
+                    <h2 className="-ml-3 font-semibold font-inter text-text-primary">
                       {siteConfig.name}
                     </h2>
                   </div>

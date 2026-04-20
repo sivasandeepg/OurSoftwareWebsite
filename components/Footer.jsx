@@ -34,10 +34,17 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
           {/* Column 1: Logo + Tagline + Social Icons */}
           <div className="space-y-6">
-            <div>
-              <h3 className="text-xs font-semibold uppercase tracking-widest text-text-primary">
+            <div className="flex items-center gap-0 mb-3">
+              <img
+                src="/images/aventurine_tech_solutions_logo.png"
+                alt="Aventurine Tech Solutions - Software Company Kavali"
+                className="w-14 h-14 rounded-lg object-contain"
+              />
+              <h3 className="-ml-3 text-sm font-bold text-text-primary">
                 {siteConfig.name}
               </h3>
+            </div>
+            <div>
               <p className="text-xs leading-relaxed text-text-muted">
                 {siteConfig.tagline}
               </p>

@@ -67,6 +67,10 @@ export const metadata = {
   alternates: {
     canonical: 'https://www.aventurinetechsolutions.com/',
   },
+  icons: {
+    icon: '/images/aventurine_tech_solutions_logo.png',
+    apple: '/apple-touch-icon.png',
+  },
   verification: {
     google: 'QTKmtYBex_Aas0-og88iESyZ0gQ1_EnJT1diF6v5DCw',
   },
@@ -96,7 +100,7 @@ export default function RootLayout({ children }) {
             "@type": ["LocalBusiness", "SoftwareCompany"],
             "name": siteConfig.name,
             "url": "https://www.aventurinetechsolutions.com",
-            "logo": "https://www.aventurinetechsolutions.com/logo.png",
+            "logo": "https://www.aventurinetechsolutions.com/images/aventurine_tech_solutions_logo.png",
             "description": "Professional software development company specializing in web development, mobile apps, and digital solutions in Kavali, Nellore District, AP.",
             "address": {
               "@type": "PostalAddress",
