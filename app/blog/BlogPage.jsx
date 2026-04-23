@@ -17,56 +17,35 @@ export default function Blog() {
 
   const blogPosts = [
     {
-      title: "The Future of Web Development: Trends to Watch in 2024",
-      excerpt: "Explore the latest trends shaping the future of web development, from AI-powered tools to edge computing.",
-      category: "Web Development",
-      date: "March 15, 2024",
+      title: "Aventurine Tech Solutions Begins Journey - Founded April 16",
+      excerpt: "Our software company officially started with 6 experienced professionals, bringing over 5+ years of collective expertise in software development and technology solutions.",
+      category: "Company News",
+      date: "April 16, 2026",
+      readTime: "3 min read",
+      image: "/images/blog/company-launch.jpg",
+      slug: "company-founding-april-16"
+    },
+    {
+      title: "Digital Marketing Services Launched - April 18",
+      excerpt: "Expanding our service portfolio, we're excited to announce the launch of our comprehensive digital marketing services to help businesses grow their online presence.",
+      category: "Services",
+      date: "April 18, 2026",
+      readTime: "4 min read",
+      image: "/images/blog/digital-marketing.jpg",
+      slug: "digital-marketing-launch-april-18"
+    },
+    {
+      title: "Our Product Development Journey - Project Start April 20",
+      excerpt: "Starting development of our first proprietary product - a major milestone marking our entry into product development and innovation. Launch coming soon!",
+      category: "Product Launch",
+      date: "April 20, 2026",
       readTime: "5 min read",
-      image: "/images/blog/web-dev-trends.jpg"
-    },
-    {
-      title: "Cloud Migration Strategies for Enterprise Applications",
-      excerpt: "Learn how to successfully migrate your enterprise applications to the cloud with minimal disruption.",
-      category: "Cloud Computing",
-      date: "March 10, 2024",
-      readTime: "8 min read",
-      image: "/images/blog/cloud-migration.jpg"
-    },
-    {
-      title: "Implementing AI in Business: A Practical Guide",
-      excerpt: "Discover practical strategies for implementing AI solutions in your business operations.",
-      category: "Artificial Intelligence",
-      date: "March 5, 2024",
-      readTime: "6 min read",
-      image: "/images/blog/ai-business.jpg"
-    },
-    {
-      title: "Building Scalable Microservices Architecture",
-      excerpt: "Learn principles and professional practices for designing and implementing scalable microservices.",
-      category: "Architecture",
-      date: "February 28, 2024",
-      readTime: "7 min read",
-      image: "/images/blog/microservices.jpg"
-    },
-    {
-      title: "The Importance of Cybersecurity in Modern Software Development",
-      excerpt: "Understanding security professional practices and how to integrate them into your development workflow.",
-      category: "Security",
-      date: "February 20, 2024",
-      readTime: "5 min read",
-      image: "/images/blog/cybersecurity.jpg"
-    },
-    {
-      title: "DevOps Transformation: From Theory to Practice",
-      excerpt: "Real-world insights on implementing DevOps practices and transforming your development culture.",
-      category: "DevOps",
-      date: "February 15, 2024",
-      readTime: "9 min read",
-      image: "/images/blog/devops.jpg"
+      image: "/images/blog/product-launch.jpg",
+      slug: "product-launch-april-20"
     }
   ]
 
-  const categories = ["All", "Web Development", "Cloud Computing", "Artificial Intelligence", "Architecture", "Security", "DevOps"]
+  const categories = ["All", "Company News", "Services", "Product Launch"]
   const [selectedCategory, setSelectedCategory] = useState("All")
 
   const filteredPosts = selectedCategory === "All" 
@@ -179,7 +158,7 @@ export default function Blog() {
                     }`}>
                       {post.readTime}
                     </span>
-                    <Button href="/contact" variant="outline" size="sm">
+                    <Button href={`/blog/${post.slug}`} variant="outline" size="sm">
                       Read More
                     </Button>
                   </div>
